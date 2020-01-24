@@ -1,4 +1,4 @@
-# Geocoder acceptance tests
+# Geocoder acceptance tests [![CircleCI](https://circleci.com/gh/entur/geocoder-acceptance-tests.svg?style=svg&circle-token=06bc92fa350171da8c30f460ff5696edeb1ad579)](https://circleci.com/gh/entur/geocoder-acceptance-tests)
 
 Proof-of-concept for creating a baseline set of tests for the geocoder that can be run as smoke tests in the geocoder build pipeline, using https://github.com/pelias/fuzzy-tester to run test cases.
 
