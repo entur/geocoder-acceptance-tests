@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: geocoder-acceptance-tests
+spec:
+  template:
+    metadata:
+      name: geocoder-acceptance-tests
+    spec:
+      containers:
+      - name: geocoder-acceptance-tests
+        image: eu.gcr.io/entur-system-1287/geocoder-acceptance-tests
+        args: ["dev"]
+      # Do not restart containers after they exit
+      restartPolicy: Never
+      imagePullSecrets:
+      - name: rutebanken-registry-key
