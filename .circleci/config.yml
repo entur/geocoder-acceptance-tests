@@ -4,7 +4,7 @@ version: 2.1
 
 orbs:
 #  slack: circleci/slack@1.0.0
-  docker: circleci/docker-publish@0.1.6
+  docker: circleci/docker@0.5.20
 
 workflows:
   "Build Pipeline":
@@ -13,6 +13,6 @@ workflows:
           name: publish
           registry: $DOCKER_REGISTRY
           image: $CIRCLE_PROJECT_REPONAME
-          tag: ${CIRCLE_BRANCH#"env/"}-v$CIRCLE_BUILD_NUM
+          tag: '${CIRCLE_BRANCH#"env/"}-v$CIRCLE_BUILD_NUM,latest'
           deploy: true
           context: global
