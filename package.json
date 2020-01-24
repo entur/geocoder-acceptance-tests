@@ -1,0 +1,13 @@
+{
+  "name": "geocoder-acceptance-tests",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e dev",
+    "staging": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e staging",
+    "production": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e production"
+  },
+  "dependencies": {
+    "pelias-fuzzy-tester": "^1.7.4"
+  }
+}

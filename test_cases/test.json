@@ -1,0 +1,72 @@
+{
+  "name": "Test",
+  "description": "A test suite to test the fuzzy tester library on Entur geocoder",
+  "priorityThresh": 3,
+  "distanceThresh": 500,
+  "tests": [
+    {
+      "id": 0,
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "Oslo"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "coordinates": [
+          10.747898,
+          59.911379
+        ],
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "Rådhusgata 5",
+        "focus.point.lat": 59.91,
+        "focus.point.lon": 10.76
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "coordinates": [
+          10.745502213376572,
+          59.90887126617493
+        ],
+        "properties": [
+          {
+            "id": "285759037"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "National",
+        "focus.point.lat": 59.91,
+        "focus.point.lon": 10.76
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "coordinates": [
+          10.7322,
+          59.914994
+        ],
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58404"
+          }
+        ]
+      }
+    }
+  ]
+}

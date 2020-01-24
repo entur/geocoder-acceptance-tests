@@ -1,0 +1,4 @@
+count,address,exp_lon,exp_lat,act_address,act_lon,act_lat,dist
+0, "Oslo",10.747898, 59.911379,"Oslo",10.747898,59.911379,0
+1, "Rådhusgata 5",10.745502213376572, 59.90887126617493,"Rådhusgata 5, Oslo",10.745502213376572,59.90887126617493,0
+2, "National",10.7322, 59.914994,"Nationaltheatret, Oslo",10.7322,59.914994,0

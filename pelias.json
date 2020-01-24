@@ -1,0 +1,9 @@
+{
+  "acceptance-tests": {
+    "endpoints": {
+      "dev": "https://api.dev.entur.io/geocoder/v1",
+      "staging": "https://api.staging.entur.io/geocoder/v1",
+      "production": "https://api.entur.io/geocoder/v1"
+    }
+  }
+}
