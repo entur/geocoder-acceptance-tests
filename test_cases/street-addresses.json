@@ -1,0 +1,168 @@
+{
+  "name": "Street addresses",
+  "description": "Verify presence of street addresses",
+  "tests": [
+    {
+      "id": "karjohansgate",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "karl johans gate 2"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Karl Johans gate",
+            "housenumber": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "strandkaien",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "strandkaien 22"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Strandkaien",
+            "housenumber": "22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "olavtryggvason",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "olav tryggvasons gate 35"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Olav Tryggvasons gate",
+            "housenumber": "35"
+          }
+        ]
+      }
+    },
+    {
+      "id": "torehund",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "tore hunds gate 65"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Tore Hunds gate",
+            "housenumber": "65"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fjellvegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "fjellvegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Fjellvegen",
+            "housenumber": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "skolevegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "skolevegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Skolevegen",
+            "housenumber": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "åsvegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "åsvegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Åsvegen",
+            "housenumber": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "strandvegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "strandvegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Strandvegen",
+            "housenumber": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kirkevegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "kirkevegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Kirkevegen",
+            "housenumber": "5"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Station labels",
+  "description": "Verify selection of train stations",
+  "tests": [
+    {
+      "id": "arendal",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "arendal stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "label": "Arendal stasjon, Arendal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gran",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "gran stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "label": "Gran stasjon, Gran"
+          }
+        ]
+      }
+    },
+    {
+      "id": "myrdal",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "myrdal stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "label": "Myrdal stasjon, Aurland"
+          }
+        ]
+      }
+    },
+    {
+      "id": "åndalsnes",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "åndalsnes stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "label": "Åndalsnes stasjon, Rauma"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fauske",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "fauske stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "label": "Fauske stasjon, Fauske"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "POI presence",
+  "description": "Verify presence of places of interests from different categories",
+  "tests": [
+    {
+      "id": "sykehus",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "sykehus"
+      },
+      "expected": {
+        "priorityThresh": 50,
+        "properties": [
+          {
+            "category": ["poi"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ambassade",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "ambassade"
+      },
+      "expected": {
+        "priorityThresh": 50,
+        "properties": [
+          {
+            "category": ["poi"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "skole",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "skole"
+      },
+      "expected": {
+        "priorityThresh": 50,
+        "properties": [
+          {
+            "category": ["poi"]
+          }
+        ]
+      }
+    }
+  ]
+}

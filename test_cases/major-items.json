@@ -1,0 +1,166 @@
+{
+  "name": "Major items",
+  "description": "Verify most important stop places in cities",
+  "tests": [
+    {
+      "id": "oslo1",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo2",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo3",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo4",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen1",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen2",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen3",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:30810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen4",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trondheim1",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "trondheim"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trondheim2",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "trondheim"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59977"
+          }
+        ]
+      }
+    }
+  ]
+}

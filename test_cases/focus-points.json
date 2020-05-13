@@ -1,0 +1,60 @@
+{
+  "name": "Focus points",
+  "description": "Find closest commonly used name from country edges",
+  "tests": [
+    {
+      "id": "haugen1",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "haugen",
+        "focus.point.lat": 57.98,
+        "focus.point.lon": 7.04
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:4205-Haugen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "haugen2",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "haugen",
+        "focus.point.lat": 70.38,
+        "focus.point.lon": 31.15
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:5435-Haugen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "haugen3",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "haugen",
+        "focus.point.lat": 65,
+        "focus.point.lon": 12.6
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:46483"
+          }
+        ]
+      }
+    }
+  ]
+}

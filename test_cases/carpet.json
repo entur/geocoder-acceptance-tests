@@ -1,0 +1,214 @@
+{
+  "name": "Carpet",
+  "description": "'Random' tests across the country",
+  "tests": [
+    {
+      "id": "sogndal",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "sogndal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Sogndal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kongsvinger",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "kongsvinger"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Kongsvinger stasjon"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sandnes",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "sandnes"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Sandnes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ålesund",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "ålesund"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Ålesund"
+          }
+        ]
+      }
+    },
+    {
+      "id": "røros",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "røros"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Røros"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rjukan",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "rjukan"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Rjukan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "flekkefjord",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "flekkefjord"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Flekkefjord"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stjørdal",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "stjørdal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Stjørdal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mosjøen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "mosjøen"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Mosjøen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fauske",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "fauske"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Fauske"
+          }
+        ]
+      }
+    },
+    {
+      "id": "harstad",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "harstad"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Harstad"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kautokeino",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "kautokeino"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Kautokeino"
+          }
+        ]
+      }
+    },
+    {
+      "id": "alta",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "alta"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Alta"
+          }
+        ]
+      }
+    }
+  ]
+}

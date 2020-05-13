@@ -1,0 +1,63 @@
+{
+  "name": "Distance",
+  "description": "Verify stop places near national border",
+  "tests": [
+    {
+      "id": "oslosdist",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo s",
+        "focus.point.lat": 59.91703,
+        "focus.point.lon": 10.72742
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "distanceThresh": 2.3,
+        "properties": [
+          {
+            "name": "Oslo S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trondheimsdist",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "trondheim s",
+        "focus.point.lat": 63.42692,
+        "focus.point.lon": 10.39690
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "distanceThresh": 2.0,
+        "properties": [
+          {
+            "name": "Trondheim S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vardødist",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "vardø",
+        "focus.point.lat": 63.42692,
+        "focus.point.lon": 10.39690
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "distanceThresh": 1200.0,
+        "properties": [
+          {
+            "name": "Vardø"
+          }
+        ]
+      }
+    }
+  ]
+}

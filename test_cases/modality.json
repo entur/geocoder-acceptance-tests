@@ -1,0 +1,86 @@
+{
+  "name": "Modality",
+  "description": "Verify stop place modalities",
+  "tests": [
+    {
+      "id": "stavangerst",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "stavanger stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "category": ["railStation"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tomterst",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "tomter stasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "category": ["railStation"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "flekkefjordrb",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "flekkefjord rutebilstasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "category": ["onstreetBus"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "osl",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo lufthavn"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "category": ["airport"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mannheller",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "mannheller ferjekai"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "category": ["onstreetBus", "harbourPort"]
+          }
+        ]
+      }
+    }
+  ]
+}
