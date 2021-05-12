@@ -658,8 +658,8 @@ nodemailer-ses-transport@^1.5.1:
     aws-sdk "^2.2.36"
 
 nodemailer@^6.3.1:
-  version "6.4.2"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.2.tgz#7147550e32cdc37453380ab78d2074533966090a"
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.6.0.tgz#ed47bb572b48d9d0dca3913fdc156203f438f427"
 
 nth-check@~1.0.1:
   version "1.0.2"
