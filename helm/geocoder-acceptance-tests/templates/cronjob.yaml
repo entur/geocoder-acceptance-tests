@@ -20,7 +20,7 @@ spec:
                   key: slack-url
                   name: {{ .Values.environment.slackUrl }}
             image: eu.gcr.io/entur-system-1287/geocoder-acceptance-tests
-            args: ["dev"]
+            args: ["{{ .Values.environment.testArg }}"]
             imagePullPolicy: Always
             name: geocoder-acceptance-tests
             resources:

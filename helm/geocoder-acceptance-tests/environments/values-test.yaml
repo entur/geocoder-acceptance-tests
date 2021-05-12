@@ -1,2 +1,3 @@
 environment:
+  testArg: staging
   slackUrl: ror-staging-slack-url
