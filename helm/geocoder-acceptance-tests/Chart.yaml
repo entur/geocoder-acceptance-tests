@@ -1,0 +1,13 @@
+apiVersion: v1
+appVersion: "0.1.0"
+description: geocoder acceptance tests cronjob
+name: geocoder-acceptance-tests
+version: 0.1.0
+keywords:
+- geocoder-acceptance-tests
+sources:
+- https://github.com/entur/geocoder-acceptance-tests
+maintainers:
+- name: 'team-ror'
+  email: team.rutedata@entur.org
+engine: gotpl

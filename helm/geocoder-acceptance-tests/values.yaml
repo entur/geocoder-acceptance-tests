@@ -1,0 +1,7 @@
+resources:
+  cpuLimit: 900m
+  memLimit: 2550Mi
+  cpuRequest: 100m
+  memRequest: 1000Mi
+
+  
