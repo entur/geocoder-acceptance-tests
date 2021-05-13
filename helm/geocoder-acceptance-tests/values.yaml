@@ -4,4 +4,6 @@ resources:
   cpuRequest: 100m
   memRequest: 1000Mi
 
-  
+image:
+  identifier: ${artifact.metadata.image}
+  imagePullPolicy: Always

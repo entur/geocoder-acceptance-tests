@@ -13,16 +13,16 @@ spec:
       template:
         spec:
           containers:
-          - env:
+          - name: geocoder-acceptance-tests
+            image: {{ .Values.image.identifier }}
+            imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+            args: ["{{ .Values.environment.testArg }}"]
+            env:
             - name: SLACK_URL
               valueFrom:
                 secretKeyRef:
                   key: slack-url
                   name: {{ .Values.environment.slackUrl }}
-            image: eu.gcr.io/entur-system-1287/geocoder-acceptance-tests
-            args: ["{{ .Values.environment.testArg }}"]
-            imagePullPolicy: Always
-            name: geocoder-acceptance-tests
             resources:
               limits:
                 cpu: {{ .Values.resources.cpuLimit }}
