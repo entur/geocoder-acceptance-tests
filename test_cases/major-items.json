@@ -10,7 +10,7 @@
         "text": "oslo"
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 3,
         "properties": [
           {
             "id": "NSR:GroupOfStopPlaces:1"
@@ -26,7 +26,7 @@
         "text": "oslo"
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 5,
         "properties": [
           {
             "id": "NSR:StopPlace:58211"
@@ -42,7 +42,7 @@
         "text": "oslo"
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 3,
         "properties": [
           {
             "id": "NSR:StopPlace:59872"
@@ -58,7 +58,7 @@
         "text": "oslo"
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 4,
         "properties": [
           {
             "id": "NSR:StopPlace:58293"

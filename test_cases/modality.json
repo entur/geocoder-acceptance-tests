@@ -13,7 +13,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "category": ["railStation"]
+            "category": ["onstreetBus", "railStation"]
           }
         ]
       }
