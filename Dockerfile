@@ -1,5 +1,7 @@
 FROM node:12.14.1-alpine
 
+RUN apk add curl
+
 RUN addgroup appuser && adduser --disabled-password appuser --ingroup appuser
 
 RUN mkdir -p /usr/src/app
