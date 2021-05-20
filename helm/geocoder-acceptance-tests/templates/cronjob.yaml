@@ -18,6 +18,8 @@ spec:
             imagePullPolicy: {{ .Values.image.imagePullPolicy }}
             args: ["{{ .Values.environment.testArg }}"]
             env:
+            - name: GOOGLE_PROJECT_ID
+              value: {{ .Values.environment.projectId }}
             - name: SLACK_URL
               valueFrom:
                 secretKeyRef:
