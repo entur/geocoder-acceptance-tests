@@ -39,7 +39,7 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "skole"
+        "text": "Hebekk skole"
       },
       "expected": {
         "priorityThresh": 50,
