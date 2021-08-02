@@ -119,7 +119,7 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "bergen"
+        "text": "bergen l"
       },
       "expected": {
         "priorityThresh": 10,
