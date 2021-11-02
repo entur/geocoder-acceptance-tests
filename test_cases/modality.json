@@ -13,7 +13,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "category": ["onstreetBus", "railStation"]
+            "category": ["railStation","onstreetBus"]
           }
         ]
       }
@@ -29,7 +29,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "category": ["railStation"]
+            "category": ["onstreetBus", "railStation"]
           }
         ]
       }
@@ -61,7 +61,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "category": ["airport"]
+            "category": ["railStation", "onstreetBus", "busStation", "airport" ]
           }
         ]
       }
