@@ -1,3 +1,5 @@
+env: prod
+
 environment:
   testArg: production
   slackUrl: ror-prod-slack-url

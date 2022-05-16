@@ -1,3 +1,5 @@
+env: dev
+
 environment:
   testArg: dev
   slackUrl: ror-dev-slack-url

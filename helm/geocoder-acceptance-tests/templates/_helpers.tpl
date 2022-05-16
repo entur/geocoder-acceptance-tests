@@ -33,4 +33,5 @@ team: ror
 slack: talk-ror
 type: cronjob
 namespace: {{ .Release.Namespace }}
+environment: {{ .Values.env }}
 {{- end }}
