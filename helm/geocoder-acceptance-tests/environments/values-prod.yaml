@@ -2,5 +2,5 @@ env: prod
 
 environment:
   testArg: production
-  slackUrl: ror-prod-slack-url
+  slackUrl: ror-prod-alerts-slack-url
   projectId: entur-1287
