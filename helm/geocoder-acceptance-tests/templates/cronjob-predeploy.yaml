@@ -1,0 +1,100 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  labels:
+    {{- include "common.labels" . | indent 4 }}
+  name: {{ template "app.name" . }}-predeploy
+  namespace: {{ .Release.Namespace }}
+spec:
+  concurrencyPolicy: Forbid
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      # delete completed or failed jobs after 3 days (to give some time for error analysis)
+      # jobs should normally be deleted automatically by marduk after graph building completion
+      ttlSecondsAfterFinished: 259200
+      template:
+        spec:
+          containers:
+          - name: elasticsearch
+            image: eu.gcr.io/entur-system-1287/es-static:master-v25-27d73746
+            imagePullPolicy: always
+            env:
+            - name: GCS_BASE_PATH
+              value: gs://kakka-dev/es-data/
+            - name: ES_DATA_PATH
+              value: data/es-data-20221209042748.tar.gz
+            resources:
+              limits:
+                cpu: 2
+                memory: 1600Mi
+              requests:
+                cpu: 500m
+                memory: 1600Mi
+            ports:
+            - containerPort: 9200
+              protocol: TCP
+            readinessProbe:
+              failureThreshold: 3
+              httpGet:
+                path: _cluster/health?wait_for_status=yellow&timeout=120s
+                port: 9200
+                scheme: HTTP
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          - name: pelias-api
+            image: eu.gcr.io/entur-system-1287/pelias:master-v264-a497248a
+            imagePullPolicy: Always
+            env:
+            - name: 
+            resources:
+              limits:
+                cpu: 800m
+                memory: 750Mi
+              requests:
+                cpu: 200m
+                memory: 500Mi
+            readinessProbe:
+              failureThreshold: 3
+              initialDelaySeconds: 5
+              periodSeconds: 10
+              successThreshold: 1
+              tcpSocket:
+                port: 3000
+              timeoutSeconds: 5   
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          - name: geocoder-acceptance-tests
+            image: {{ .Values.image.identifier }}
+            imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+            args: ["{{ .Values.environment.testArg }}"]
+            env:
+            - name: GOOGLE_PROJECT_ID
+              value: {{ .Values.environment.projectId }}
+            - name: SLACK_URL
+              valueFrom:
+                secretKeyRef:
+                  key: slack-url
+                  name: {{ .Values.environment.slackUrl }}
+            resources:
+              limits:
+                cpu: {{ .Values.resources.cpuLimit }}
+                memory: {{ .Values.resources.memLimit }}
+              requests:
+                cpu: {{ .Values.resources.cpuRequest }}
+                memory: {{ .Values.resources.memRequest }}
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          dnsPolicy: ClusterFirst
+          restartPolicy: Never
+          schedulerName: default-scheduler
+          securityContext: {}
+          terminationGracePeriodSeconds: 30
+  schedule: 0 0 * * *
+  successfulJobsHistoryLimit: 1
+  suspend: true
+status: {}
