@@ -49,8 +49,6 @@ spec:
           - name: pelias-api
             image: eu.gcr.io/entur-system-1287/pelias:master-v264-a497248a
             imagePullPolicy: Always
-            env:
-            - name: 
             resources:
               limits:
                 cpu: 800m
