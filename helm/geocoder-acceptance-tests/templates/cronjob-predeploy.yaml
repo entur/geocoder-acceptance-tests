@@ -91,6 +91,8 @@ spec:
           restartPolicy: Never
           schedulerName: default-scheduler
           securityContext: {}
+          serviceAccount: application
+          serviceAccountName: application
           terminationGracePeriodSeconds: 30
   schedule: 0 0 * * *
   successfulJobsHistoryLimit: 1
