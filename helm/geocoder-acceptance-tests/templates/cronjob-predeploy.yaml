@@ -69,7 +69,7 @@ spec:
           - name: geocoder-acceptance-tests
             image: {{ .Values.image.identifier }}
             imagePullPolicy: {{ .Values.image.imagePullPolicy }}
-            args: ["{{ .Values.environment.testArg }}"]
+            args: ["local"]
             env:
             - name: GOOGLE_PROJECT_ID
               value: {{ .Values.environment.projectId }}
