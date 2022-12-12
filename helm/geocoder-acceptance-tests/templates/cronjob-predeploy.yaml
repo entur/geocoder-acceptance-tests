@@ -17,7 +17,7 @@ spec:
         spec:
           containers:
           - name: elasticsearch
-            image: eu.gcr.io/entur-system-1287/es-static:master-v25-27d73746
+            image: eu.gcr.io/entur-system-1287/es-static:master-v26-8908900a
             imagePullPolicy: Always
             env:
             - name: GCS_BASE_PATH
@@ -34,7 +34,7 @@ spec:
             ports:
             - containerPort: 9200
               protocol: TCP
-            readinessProbe:
+            startupProbe:
               httpGet:
                 path: _cluster/health?wait_for_status=yellow&timeout=120s
                 port: 9200
