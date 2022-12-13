@@ -34,17 +34,6 @@ spec:
             ports:
             - containerPort: 9200
               protocol: TCP
-            lifecycle:
-              postStart:
-                exec:
-                  command:
-                  - /bin/sh
-                  - -c
-                  - |
-                    until $(curl --output /dev/null --silent --head --fail http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=120s); do
-                        printf '.'
-                        sleep 5
-                    done
             terminationMessagePath: /dev/termination-log
             terminationMessagePolicy: File
           - name: pelias-api
@@ -64,6 +53,8 @@ spec:
             imagePullPolicy: {{ .Values.image.imagePullPolicy }}
             args: ["local"]
             env:
+            - name: LOCAL
+              value: true
             - name: GOOGLE_PROJECT_ID
               value: {{ .Values.environment.projectId }}
             - name: SLACK_URL
