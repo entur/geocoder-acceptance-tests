@@ -13,6 +13,7 @@ spec:
       # delete completed or failed jobs after 3 days (to give some time for error analysis)
       # jobs should normally be deleted automatically by marduk after graph building completion
       ttlSecondsAfterFinished: 259200
+      activeDeadlineSeconds: 300
       template:
         spec:
           containers:
@@ -112,6 +113,5 @@ spec:
                 defaultMode: 420
   schedule: 0 0 * * *
   successfulJobsHistoryLimit: 1
-  activeDeadlineSeconds: 300
   suspend: true
 status: {}
