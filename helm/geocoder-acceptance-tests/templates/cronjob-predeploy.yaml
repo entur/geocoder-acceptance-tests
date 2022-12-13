@@ -23,7 +23,7 @@ spec:
             - name: GCS_BASE_PATH
               value: gs://kakka-dev/es-data/
             - name: ES_DATA_PATH
-              value: data/es-data-20221209042748.tar.gz
+              value: data/es-data-20221213142547.tar.gz
             resources:
               limits:
                 cpu: 2
@@ -51,6 +51,30 @@ spec:
                 memory: 500Mi
             terminationMessagePath: /dev/termination-log
             terminationMessagePolicy: File
+          - name: nibiru
+            image: eu.gcr.io/entur-system-1287/nibiru:master-v154-34bed66d
+            imagePullPolicy: Always
+            env:
+              - name: JAVA_OPTIONS
+                value: -server -Xmx500m -Dspring.config.location=/etc/application-config/application.properties
+                      -Dfile.encoding=UTF-8
+              - name: TZ
+                value: Europe/Oslo
+            resources:
+              limits:
+                cpu: 1
+                memory: 750Mi
+              requests:
+                cpu: 200m
+                memory: 650Mi
+            volumeMounts:
+              - mountPath: /etc/application-config
+                name: nibiru-application-config
+                readOnly: true
+            ports:
+              - containerPort: 4000
+                name: http
+                protocol: TCP
           - name: geocoder-acceptance-tests
             image: {{ .Values.image.identifier }}
             imagePullPolicy: {{ .Values.image.imagePullPolicy }}
@@ -81,6 +105,11 @@ spec:
           serviceAccount: application
           serviceAccountName: application
           terminationGracePeriodSeconds: 30
+          volumes:
+            - name: nibiru-application-config
+              configMap:
+                name: {{ template "app.name" . }}-nibiru-config
+                defaultMode: 420
   schedule: 0 0 * * *
   successfulJobsHistoryLimit: 1
   suspend: true
