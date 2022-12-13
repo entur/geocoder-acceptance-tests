@@ -3,4 +3,4 @@ env: prod
 environment:
   testArg: production
   slackUrl: ror-prod-alerts-slack-url
-  projectId: entur-1287
+  projectId: ent-kub-prd

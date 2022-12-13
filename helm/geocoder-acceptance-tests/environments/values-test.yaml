@@ -3,4 +3,4 @@ env: test
 environment:
   testArg: staging
   slackUrl: ror-staging-slack-url
-  projectId: entur-test-1287
+  projectId: ent-kub-tst
