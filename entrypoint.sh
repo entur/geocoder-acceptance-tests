@@ -29,9 +29,9 @@ fi
 
 yarn run $1
 
-if [[ ! -z ${LOCAL} ]]; then
+#if [[ ! -z ${LOCAL} ]]; then
   # send pubsub message to kakka with test results
-fi
+#fi
 
 if [ $? -eq 0 ]
 then
