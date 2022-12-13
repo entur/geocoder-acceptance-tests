@@ -23,6 +23,7 @@ if [[ ! -z ${LOCAL} ]]; then
     printf '.'
     sleep 5
   done
+  echo "Done waiting for elasticsearch"
 fi
 
 yarn run $1
