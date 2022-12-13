@@ -18,7 +18,8 @@ function send_test_failure_notification {
 }
 
 if [[ ! -z ${LOCAL} ]]; then
-  until $(curl --output /dev/null --silent --head --fail http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=120s); do
+  echo "Waiting for elasticsearch"
+  until $(curl --output /dev/null --silent --head --fail http://localhost:9200/_cluster/health\?wait_for_status=yellow\&timeout=120s); do
     printf '.'
     sleep 5
   done
