@@ -105,7 +105,6 @@ spec:
           serviceAccount: application
           serviceAccountName: application
           terminationGracePeriodSeconds: 30
-          shareProcessNamespace: true
           volumes:
             - name: nibiru-application-config
               configMap:
@@ -113,5 +112,7 @@ spec:
                 defaultMode: 420
   schedule: 0 0 * * *
   successfulJobsHistoryLimit: 1
+  activeDeadlineSeconds: 300
+  ttlSecondsAfterFinished: 86400
   suspend: true
 status: {}
