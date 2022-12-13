@@ -113,6 +113,5 @@ spec:
   schedule: 0 0 * * *
   successfulJobsHistoryLimit: 1
   activeDeadlineSeconds: 300
-  ttlSecondsAfterFinished: 86400
   suspend: true
 status: {}
