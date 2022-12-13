@@ -29,6 +29,12 @@ fi
 
 yarn run $1
 
+if [[ ! -z ${LOCAL} ]]; then
+  # kill sidecar containers
+  pkill java && pkill node
+  # send pubsub message to kakka with test results
+fi
+
 if [ $? -eq 0 ]
 then
   echo "Successfully test run"

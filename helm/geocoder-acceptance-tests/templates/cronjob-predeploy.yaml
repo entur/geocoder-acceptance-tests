@@ -105,6 +105,7 @@ spec:
           serviceAccount: application
           serviceAccountName: application
           terminationGracePeriodSeconds: 30
+          sharedProcessNamespace: true
           volumes:
             - name: nibiru-application-config
               configMap:
