@@ -92,8 +92,8 @@ spec:
                 secretKeyRef:
                   key: slack-url
                   name: {{ .Values.environment.slackUrl }}
-            - name: DEBUG
-              value: "true"
+            - name: ES_DATA_PATH
+              value: data/es-data-20221213142547.tar.gz
             resources:
               limits:
                 cpu: {{ .Values.resources.cpuLimit }}
