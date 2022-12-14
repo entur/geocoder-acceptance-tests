@@ -20,7 +20,8 @@ function send_test_failure_notification {
 
 function send_test_result_message {
     if [[ ! -z ${PUBSUB_TOPIC} ]]; then
-      gcloud pubsub topics publish $PUBSUB_TOPIC --message "{\"success\": $1}"
+      echo "Sending test result message"
+      gcloud pubsub topics publish $PUBSUB_TOPIC --message "{\"status\": $1}" --attribute=STATUS="$1"
     fi
 }
 
@@ -39,9 +40,9 @@ yarn run $1
 if [ $? -eq 0 ]
 then
   echo "Successfully test run"
-  send_test_result_message true
+  send_test_result_message "SUCCESS"
 else
   echo "Some tests failed" >&2
   send_test_failure_notification
-  send_test_result_message false
+  send_test_result_message "FAILURE"
 fi
