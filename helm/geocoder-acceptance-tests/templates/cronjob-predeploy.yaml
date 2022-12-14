@@ -13,7 +13,7 @@ spec:
       # delete completed or failed jobs after 3 days (to give some time for error analysis)
       # jobs should normally be deleted automatically by marduk after graph building completion
       ttlSecondsAfterFinished: 259200
-      activeDeadlineSeconds: 300
+      #activeDeadlineSeconds: 300
       template:
         spec:
           containers:
@@ -92,6 +92,8 @@ spec:
                 secretKeyRef:
                   key: slack-url
                   name: {{ .Values.environment.slackUrl }}
+            - name: DEBUG
+              value: "true"
             resources:
               limits:
                 cpu: {{ .Values.resources.cpuLimit }}

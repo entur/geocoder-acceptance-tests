@@ -47,3 +47,9 @@ else
   send_test_failure_notification
   send_test_result_message "FAILURE"
 fi
+
+if [[ "$DEBUG" == "true" ]]
+then
+  echo "Sleeping 10 minutes for debug purposes."
+  sleep 10m
+fi
