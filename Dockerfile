@@ -1,4 +1,8 @@
-FROM node:12.14.1-alpine
+FROM node:12.14.1-alpine as node
+
+FROM google/cloud-sdk:alpine
+
+COPY --from=node . .
 
 RUN apk add curl
 
