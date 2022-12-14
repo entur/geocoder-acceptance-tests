@@ -18,9 +18,9 @@ function send_test_failure_notification {
     fi
 }
 
-function send_test_result_message(success) {
+function send_test_result_message {
     if [[ ! -z ${PUBSUB_TOPIC} ]]; then
-      gcloud pubsub topics publish $PUBSUB_TOPIC --message "{\"success\": $success}"
+      gcloud pubsub topics publish $PUBSUB_TOPIC --message "{\"success\": $1}"
     fi
 }
 
