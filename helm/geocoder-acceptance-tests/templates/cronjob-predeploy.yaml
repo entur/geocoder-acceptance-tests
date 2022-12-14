@@ -18,13 +18,11 @@ spec:
         spec:
           containers:
           - name: elasticsearch
-            image: eu.gcr.io/entur-system-1287/es-static:master-v26-8908900a
+            image: eu.gcr.io/entur-system-1287/es-static
             imagePullPolicy: Always
             env:
             - name: GCS_BASE_PATH
-              value: gs://kakka-dev/es-data/
-            - name: ES_DATA_PATH
-              value: data/es-data-20221213142547.tar.gz
+              value: {{ .Values.environment.gcsBasePath }}
             resources:
               limits:
                 cpu: 2
@@ -38,7 +36,7 @@ spec:
             terminationMessagePath: /dev/termination-log
             terminationMessagePolicy: File
           - name: pelias-api
-            image: eu.gcr.io/entur-system-1287/pelias:master-v264-a497248a
+            image: eu.gcr.io/entur-system-1287/pelias
             imagePullPolicy: Always
             ports:
             - containerPort: 3000
@@ -53,7 +51,7 @@ spec:
             terminationMessagePath: /dev/termination-log
             terminationMessagePolicy: File
           - name: nibiru
-            image: eu.gcr.io/entur-system-1287/nibiru:master-v154-34bed66d
+            image: eu.gcr.io/entur-system-1287/nibiru
             imagePullPolicy: Always
             env:
               - name: JAVA_OPTIONS
@@ -84,7 +82,7 @@ spec:
             - name: LOCAL
               value: "true"
             - name: PUBSUB_TOPIC
-              value: projects/ent-kakka-dev/topics/GecoderAcceptanceTestsPreDeployResult
+              value: {{ .Values.environment.pubsubTopic }}
             - name: GOOGLE_PROJECT_ID
               value: {{ .Values.environment.projectId }}
             - name: SLACK_URL
@@ -92,8 +90,6 @@ spec:
                 secretKeyRef:
                   key: slack-url
                   name: {{ .Values.environment.slackUrl }}
-            - name: ES_DATA_PATH
-              value: data/es-data-20221213142547.tar.gz
             resources:
               limits:
                 cpu: {{ .Values.resources.cpuLimit }}
