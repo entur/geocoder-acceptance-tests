@@ -2,5 +2,7 @@ env: prod
 
 environment:
   testArg: production
-  slackUrl: ror-prod-alerts-slack-url
+  slackUrl: ror-prod-slack-url
   projectId: ent-kub-prd
+  pubsubTopic: projects/entur-ror-prod/topics/GeoCoderSmokeTestQueue
+  gcsBasePath: gs://kakka-production/es-data/

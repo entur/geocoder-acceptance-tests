@@ -4,3 +4,5 @@ environment:
   testArg: staging
   slackUrl: ror-staging-slack-url
   projectId: ent-kub-tst
+  pubsubTopic: projects/entur-ror-test/topics/GeoCoderSmokeTestQueue
+  gcsBasePath: gs://kakka-test/es-data/
