@@ -5,4 +5,4 @@ environment:
   slackUrl: ror-staging-slack-url
   projectId: ent-kub-tst
   pubsubTopic: projects/ent-kakka-tst/topics/ror.kakka.outbound.topic.geocoder.smoke.test
-  gcsBasePath: gs://kakka-test/es-data/
+  gcsBasePath: gs://ror-kakka-test/es-data/
