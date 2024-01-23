@@ -20,7 +20,7 @@ function send_test_failure_notification {
 
 function send_test_result_message {
     if [[ ! -z ${PUBSUB_TOPIC} ]]; then
-      echo "Sending test result message"
+      echo "Sending test result message status: "${1}" and ES_DATA_PATH: " ${ES_DATA_PATH} " to topic:" ${PUBSUB_TOPIC}
       gcloud pubsub topics publish $PUBSUB_TOPIC --message "{\"status\": $1}" --attribute=STATUS="$1",ES_DATA_PATH="${ES_DATA_PATH}"
       echo "Result of pubsub command: $?"
     fi
