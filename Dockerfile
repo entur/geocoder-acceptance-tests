@@ -1,6 +1,6 @@
 FROM node:12.14.1-alpine as node
 
-FROM google/cloud-sdk:alpine
+FROM google/cloud-sdk:408.0.1
 
 COPY --from=node . .
 
