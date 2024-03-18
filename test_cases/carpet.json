@@ -179,17 +179,17 @@
       }
     },
     {
-      "id": "kautokeino",
+      "id": "landskronaveien",
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "kautokeino"
+        "text": "landskronaveien"
       },
       "expected": {
         "priorityThresh": 3,
         "properties": [
           {
-            "name": "kautokeino"
+            "name": "landskronaveien"
           }
         ]
       }
