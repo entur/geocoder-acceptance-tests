@@ -43,7 +43,7 @@ then
   echo "Successfully test run"
   send_test_result_message "SUCCESS"
 else
-  echo "Some tests failed" >&2
+  echo "Some tests failed"
   send_test_failure_notification
   send_test_result_message "FAILURE"
 fi
