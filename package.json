@@ -6,7 +6,9 @@
     "local": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e local",
     "dev": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e dev",
     "staging": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e staging",
-    "production": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e production"
+    "production": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e production",
+    "v2dev": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2dev",
+    "v2staging": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2staging"
   },
   "dependencies": {
     "pelias-fuzzy-tester": "^1.7.4"
