@@ -1,0 +1,54 @@
+{
+  "name": "Fuzzy search",
+  "description": "Verify fuzzy search with common spelling mistakes / variations",
+  "tests": [
+    {
+      "id": "oslo1",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "olso"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "movig",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "møvig"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "name": "Møvik"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wien",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "wien"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:1043"
+          }
+        ]
+      }
+    }
+  ]
+}
