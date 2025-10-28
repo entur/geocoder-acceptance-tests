@@ -1,10 +1,13 @@
-FROM node:24-alpine as node
-
 FROM google/cloud-sdk:alpine
 
-COPY --from=node . .
+ENV NODE_VERSION=24.10.0
 
-RUN apk add curl
+RUN apk add --no-cache curl
+
+RUN ARCH=$( [ "$TARGETARCH" = "arm64" ] && echo "arm64" || echo "x64" ) && \
+    curl -fsSL "https://unofficial-builds.nodejs.org/download/release/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-${ARCH}-musl.tar.xz" \
+      | tar -xJ -C /usr/local --strip-components=1
+RUN npm install -g yarn@1.22.22
 
 RUN addgroup appuser && adduser --disabled-password appuser --ingroup appuser
 
