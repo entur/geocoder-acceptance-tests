@@ -202,7 +202,7 @@
         "text": "alta"
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 4,
         "properties": [
           {
             "name": "Alta"
