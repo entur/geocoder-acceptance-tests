@@ -11,6 +11,6 @@
     "v2staging": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2staging"
   },
   "dependencies": {
-    "pelias-fuzzy-tester": "^1.7.4"
+    "pelias-fuzzy-tester": "^2.2.0"
   }
 }
