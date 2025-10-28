@@ -1,0 +1,98 @@
+{
+  "name": "Edge cases",
+  "description": "Results that required some tweaks",
+  "tests": [
+    {
+      "id": "kaia kafe",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "kaia kafe"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "county": "Nordland",
+            "county_gid": "whosonfirst:county:KVE:TopographicPlace:18",
+            "locality": "Narvik",
+            "locality_gid": "whosonfirst:locality:KVE:TopographicPlace:1806"
+          }
+        ]
+      }
+    },
+    {
+      "id": "grünerløkka",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "grünerløkka"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "category": [
+              "bydel"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gardermoen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "gardermoen"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58211",
+            "name": "Oslo lufthavn",
+            "popular_name": "Gardermoen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo sentralstasjon",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo sentralstasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59872",
+            "name": "Oslo S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "odeon oslo",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "odeon oslo"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "ODEON Oslo",
+            "category": [
+              "poi",
+              "cinema"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
