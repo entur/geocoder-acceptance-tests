@@ -34,7 +34,7 @@ if [ -n "${LOCAL}" ]; then
   echo "Done waiting for elasticsearch"
 fi
 
-yarn run $1
+npm run $1
 
 if [ $? -eq 0 ]; then
   echo "Successfully test run"

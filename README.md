@@ -4,8 +4,8 @@ Proof-of-concept for creating a baseline set of tests for the geocoder that can 
 
 Usage:
 
-    yarn
-    yarn run dev|staging|production
+    npm install
+    npm run dev|staging|production
 
 Or inside docker:
 

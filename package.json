@@ -12,6 +12,5 @@
   },
   "dependencies": {
     "pelias-fuzzy-tester": "^2.2.0"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }
