@@ -93,6 +93,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "oslodistance",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo",
+        "focus.point.lat": 59.95501,
+        "focus.point.lon": 9.46593
+
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "Oslo",
+            "distance": 71.677
+          }
+        ]
+      }
     }
   ]
 }
