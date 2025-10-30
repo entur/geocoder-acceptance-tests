@@ -69,6 +69,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:59872",
+            "gid": "openstreetmap:venue:NSR:StopPlace:59872",
             "name": "Oslo S"
           }
         ]
@@ -110,6 +111,29 @@
           {
             "name": "Oslo",
             "distance": 71.677
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergensentrum",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen sentrum"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:174",
+            "name": "Bergen sentrum",
+            "county": "Vestland",
+            "country_a": "NOR",
+            "county_gid": "whosonfirst:county:KVE:TopographicPlace:46",
+            "locality": "Bergen",
+            "locality_gid": "whosonfirst:locality:KVE:TopographicPlace:4601",
+            "label": "Bergen sentrum, Bergen"
           }
         ]
       }
