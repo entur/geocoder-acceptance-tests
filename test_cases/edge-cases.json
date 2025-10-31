@@ -137,6 +137,22 @@
           }
         ]
       }
+    },
+    {
+      "id": "altahøyden",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "altahøyden"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "county": "Finnmark"
+          }
+        ]
+      }
     }
   ]
 }
