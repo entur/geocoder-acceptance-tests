@@ -1,0 +1,25 @@
+{
+  "name": "Place endpoint",
+  "description": "Verify place endpoint",
+  "tests": [
+    {
+      "id": "gosp",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "whosonfirst:address:NSR:GroupOfStopPlaces:1,whosonfirst:address:NSR:GroupOfStopPlaces:10"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          },
+          {
+            "id": "NSR:GroupOfStopPlaces:10"
+          }
+        ]
+      }
+    }
+  ]
+}
