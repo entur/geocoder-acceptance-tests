@@ -1,0 +1,26 @@
+{
+  "name": "Nearby endpoint",
+  "description": "Verify nearby endpoint (identical to reverse?)",
+  "tests": [
+    {
+      "id": "nearby",
+      "endpoint": "nearby",
+      "status": "pass",
+      "in": {
+        "point.lat": "59.91107",
+        "point.lon": "10.748128"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          },
+          {
+            "id": "OSM:TopographicPlace:5878221985"
+          }
+        ]
+      }
+    }
+  ]
+}
