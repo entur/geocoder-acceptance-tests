@@ -1,0 +1,25 @@
+{
+  "name": "Search endpoint",
+  "description": "Verify search endpoint (almost identical to autocomplete)",
+  "tests": [
+    {
+      "id": "sons",
+      "endpoint": "search",
+      "status": "pass",
+      "in": {
+        "text": "sons"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:0301-Sons gate"
+          },
+          {
+            "id": "NSR:StopPlace:59639"
+          }
+        ]
+      }
+    }
+  ]
+}
