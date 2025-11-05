@@ -3,10 +3,10 @@
     "endpoints": {
       "local": "http://localhost:4000/nibiru/api",
       "dev": "https://api.dev.entur.io/geocoder/v1",
-      "staging": "https://api.staging.entur.io/geocoder/v1",
-      "production": "https://api.entur.io/geocoder/v1",
+      "tst": "https://api.staging.entur.io/geocoder/v1",
+      "prd": "https://api.entur.io/geocoder/v1",
       "v2dev": "https://api.dev.entur.io/geocoder/v2",
-      "v2staging": "https://api.staging.entur.io/geocoder/v2"
+      "v2tst": "https://api.staging.entur.io/geocoder/v2"
     }
   }
 }

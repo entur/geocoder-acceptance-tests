@@ -1,7 +1,7 @@
 env: test
 
 environment:
-  testArg: staging
+  testArg: tst
   slackUrl: ror-staging-slack-url
   projectId: ent-kub-tst
   pubsubTopic: projects/ent-kakka-tst/topics/ror.kakka.outbound.topic.geocoder.smoke.test

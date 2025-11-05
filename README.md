@@ -5,12 +5,12 @@ Proof-of-concept for creating a baseline set of tests for the geocoder that can 
 Usage:
 
     npm install
-    npm run dev|staging|production
+    npm run dev|tst|prd
 
 Or inside docker:
 
     docker build -t geocoder-acceptance-tests .
-    docker run geocoder-acceptance-tests dev|staging|production
+    docker run geocoder-acceptance-tests dev|tst|prd
 
 Run as kubernetes job:
 
