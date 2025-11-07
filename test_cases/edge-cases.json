@@ -169,6 +169,27 @@
           }
         ]
       }
+    },
+    {
+      "id": "reverse-layers-categories-filter",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "point.lat": 60.060936,
+        "point.lon": 10.309086,
+        "layers": "venue",
+        "categories": "onstreetBus",
+        "size": 50,
+        "boundary.circle.radius": 2.5
+      },
+      "unexpected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "layer": "address"
+          }
+        ]
+      }
     }
   ]
 }
