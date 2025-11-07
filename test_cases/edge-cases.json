@@ -153,6 +153,22 @@
           }
         ]
       }
+    },
+    {
+      "id": "bergenpoliti",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen sentrum politistasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "OSM:TopographicPlace:2624518"
+          }
+        ]
+      }
     }
   ]
 }
