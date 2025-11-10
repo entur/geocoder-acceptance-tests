@@ -207,7 +207,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "nsr-whosonfirst-openstreetmap-parent",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "vippetangen ferjeterminal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59222",
+            "gid": "openstreetmap:venue:NSR:StopPlace:59222",
+            "layer": "venue",
+            "source": "openstreetmap"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nsr-whosonfirst-openstreetmap-nonparent",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo gate"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:6520",
+            "gid": "whosonfirst:venue:NSR:StopPlace:6520",
+            "layer": "venue",
+            "source": "whosonfirst"
+          }
+        ]
+      }
     }
-
   ]
 }
