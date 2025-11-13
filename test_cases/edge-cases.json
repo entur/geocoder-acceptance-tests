@@ -103,7 +103,6 @@
         "text": "oslo",
         "focus.point.lat": 59.95501,
         "focus.point.lon": 9.46593
-
       },
       "expected": {
         "priorityThresh": 3,
@@ -242,6 +241,44 @@
             "gid": "whosonfirst:venue:NSR:StopPlace:6520",
             "layer": "venue",
             "source": "whosonfirst"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lille",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "lille"
+      },
+      "unexpected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "name": "Lille Lerresfjord kai"
+          },
+          {
+            "name": "Lille Survik kai"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Lille-uppercase",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "Lille"
+      },
+      "unexpected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "name": "Lille Lerresfjord kai"
+          },
+          {
+            "name": "Lille Survik kai"
           }
         ]
       }

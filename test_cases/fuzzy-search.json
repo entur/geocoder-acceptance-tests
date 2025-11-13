@@ -19,6 +19,22 @@
       }
     },
     {
+      "id": "Oslo1-uppercase",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "Olso"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      }
+    },
+    {
       "id": "movig",
       "endpoint": "autocomplete",
       "status": "pass",

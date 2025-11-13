@@ -15,7 +15,28 @@
           {
             "category": ["vegadresse"],
             "street": "Karl Johans gate",
-            "housenumber": "2"
+            "name": "Karl Johans gate 2",
+            "housenumber": "2",
+            "label": "Karl Johans gate 2, Sarpsborg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "karjohansgate-nonumber",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "karl johans gate"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "category": ["street"],
+            "street": "Karl Johans gate",
+            "name": "Karl Johans gate",
+            "label": "Karl Johans gate, Sarpsborg"
           }
         ]
       }
@@ -28,12 +49,13 @@
         "text": "strandkaien 22"
       },
       "expected": {
-        "priorityThresh": 1,
+        "priorityThresh": 2,
         "properties": [
           {
             "category": ["vegadresse"],
             "street": "Strandkaien",
-            "housenumber": "22"
+            "housenumber": "22",
+            "label": "Strandkaien 22, Bergen"
           }
         ]
       }
@@ -51,7 +73,8 @@
           {
             "category": ["vegadresse"],
             "street": "Olav Tryggvasons gate",
-            "housenumber": "35"
+            "housenumber": "35",
+            "label": "Olav Tryggvasons gate 35, Trondheim"
           }
         ]
       }
@@ -163,6 +186,25 @@
           }
         ]
       }
+    },
+    {
+      "id": "oslo c",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo c"
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "category": ["vegadresse"],
+            "street": "Oslo Gate 2C",
+            "housenumber": "2C"
+          }
+        ]
+      }
     }
+
   ]
 }
