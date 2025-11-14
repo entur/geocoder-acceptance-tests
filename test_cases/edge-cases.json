@@ -282,6 +282,27 @@
           }
         ]
       }
+    },
+    {
+      "id": "jernbanetorget-description",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "jernbanetorget",
+        "multiModal": "all"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "description": [
+              {
+                "nor": "foran Oslo S"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
