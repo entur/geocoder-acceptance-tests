@@ -21,6 +21,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "reverse-with-boundary",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "point.lat": "59.91107",
+        "point.lon": "10.748128",
+        "layers": "venue",
+        "multiModal": "parent",
+        "boundary.circle.radius": "0.1"
+      },
+      "unexpected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58366"
+          }
+        ]
+      }
     }
   ]
 }
