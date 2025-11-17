@@ -58,7 +58,7 @@
         "text": "ålesund"
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 4,
         "properties": [
           {
             "name": "Ålesund"
