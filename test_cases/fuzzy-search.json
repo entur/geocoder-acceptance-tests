@@ -51,11 +51,11 @@
       }
     },
     {
-      "id": "wien",
+      "id": "wiens",
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "wien"
+        "text": "wiens"
       },
       "expected": {
         "priorityThresh": 3,
