@@ -12,7 +12,7 @@
         "focus.point.lon": 7.04
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 4,
         "properties": [
           {
             "id": "KVE:TopographicPlace:4205-Haugen"

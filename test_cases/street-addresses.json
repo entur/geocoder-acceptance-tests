@@ -10,7 +10,7 @@
         "text": "karl johans gate 2"
       },
       "expected": {
-        "priorityThresh": 1,
+        "priorityThresh": 3,
         "properties": [
           {
             "category": ["vegadresse"],

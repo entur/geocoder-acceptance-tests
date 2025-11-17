@@ -9,7 +9,7 @@
       "in": {
         "text": "storskog",
         "focus.point.lat": 69,
-        "focus.point.lon": 7
+        "focus.point.lon": 26
       },
       "expected": {
         "priorityThresh": 3,

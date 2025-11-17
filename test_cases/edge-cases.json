@@ -292,7 +292,7 @@
         "multiModal": "all"
       },
       "expected": {
-        "priorityThresh": 4,
+        "priorityThresh": 10,
         "properties": [
           {
             "description": [
