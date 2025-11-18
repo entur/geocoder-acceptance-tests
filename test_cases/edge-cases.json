@@ -303,6 +303,23 @@
           }
         ]
       }
+    },
+    {
+      "id": "ullerud-stop-first",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "ullerud"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:5496"
+          }
+        ]
+      }
+
     }
   ]
 }
