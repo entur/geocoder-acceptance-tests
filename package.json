@@ -7,6 +7,7 @@
     "dev": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e dev -m 10",
     "tst": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e tst -m 10",
     "prd": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e prd -m 10",
+    "v2local": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2local -m 10",
     "v2dev": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2dev -m 10",
     "v2tst": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2tst -m 10",
     "v2prd": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v2prd -m 10"

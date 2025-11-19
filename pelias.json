@@ -5,6 +5,7 @@
       "dev": "https://api.dev.entur.io/geocoder/v1",
       "tst": "https://api.staging.entur.io/geocoder/v1",
       "prd": "https://api.entur.io/geocoder/v1",
+      "v2local": "http://localhost:8080/v2",
       "v2dev": "https://api.dev.entur.io/geocoder/v2",
       "v2tst": "https://api.staging.entur.io/geocoder/v2",
       "v2prd": "https://api.entur.io/geocoder/v2"
