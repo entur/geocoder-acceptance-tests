@@ -319,7 +319,23 @@
           }
         ]
       }
-
+    },
+    {
+      "id": "oslovägen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo",
+        "boundary.country": "SWE"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "name": "Oslovägen"
+          }
+        ]
+      }
     }
   ]
 }
