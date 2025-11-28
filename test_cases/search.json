@@ -13,13 +13,28 @@
         "priorityThresh": 4,
         "properties": [
           {
-            "id": "KVE:TopographicPlace:0301-Sons gate"
-          },
-          {
             "id": "NSR:StopPlace:59639"
           }
         ]
       }
+    },
+    {
+      "id": "sons2",
+      "endpoint": "search",
+      "status": "pass",
+      "in": {
+        "size": 25,
+        "text": "sons"
+      },
+      "expected": {
+        "priorityThresh": 25,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:0301-Sons gate"
+          }
+        ]
+      }
     }
+
   ]
 }
