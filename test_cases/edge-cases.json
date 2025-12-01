@@ -336,6 +336,25 @@
           }
         ]
       }
+    },
+    {
+      "id": "county_ids",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "halden",
+        "boundary.county_ids": "KVE:TopographicPlace:31",
+        "size": 1
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "county_gid": "whosonfirst:county:KVE:TopographicPlace:31"
+          }
+        ]
+      }
     }
+
   ]
 }
