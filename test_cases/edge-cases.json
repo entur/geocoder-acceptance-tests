@@ -342,19 +342,54 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "halden",
-        "boundary.county_ids": "KVE:TopographicPlace:31",
+        "text": "osl",
+        "boundary.county_ids": "KVE:TopographicPlace:18,KVE:TopographicPlace:55,KVE:TopographicPlace:56",
+        "boundary.country": "NOR",
         "size": 1
       },
       "expected": {
         "priorityThresh": 1,
         "properties": [
           {
-            "county_gid": "whosonfirst:county:KVE:TopographicPlace:31"
+            "county_gid": "whosonfirst:county:KVE:TopographicPlace:18"
+          }
+        ]
+      }
+    },
+    {
+      "id": "openaddresses-address",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "romsdalveien",
+        "boundary.county_ids": "KVE:TopographicPlace:56",
+        "sources": "openaddresses",
+        "size": 20
+      },
+      "expected": {
+        "priorityThresh": 20,
+        "properties": [
+          {
+            "id": "6256474009"
+          }
+        ]
+      }
+    },
+    {
+      "id": "glassverket-moss",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "glassverket moss"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:3018"
           }
         ]
       }
     }
-
   ]
 }
