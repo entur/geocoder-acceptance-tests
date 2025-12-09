@@ -370,7 +370,25 @@
         "priorityThresh": 20,
         "properties": [
           {
-            "id": "6256474009"
+            "housenumber": "76A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "openaddresses-address-short-token",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "nils gotlands veg",
+        "sources": "openaddresses",
+        "size": 20
+      },
+      "expected": {
+        "priorityThresh": 20,
+        "properties": [
+          {
+            "housenumber": "14"
           }
         ]
       }
