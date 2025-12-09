@@ -289,10 +289,11 @@
       "status": "pass",
       "in": {
         "text": "jernbanetorget",
-        "multiModal": "all"
+        "multiModal": "all",
+        "size": 20
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 20,
         "properties": [
           {
             "description": [
@@ -370,7 +371,7 @@
         "priorityThresh": 20,
         "properties": [
           {
-            "housenumber": "76A"
+            "housenumber": "10"
           }
         ]
       }
@@ -382,10 +383,10 @@
       "in": {
         "text": "nils gotlands veg",
         "sources": "openaddresses",
-        "size": 20
+        "size": 30
       },
       "expected": {
-        "priorityThresh": 20,
+        "priorityThresh": 30,
         "properties": [
           {
             "housenumber": "14"
