@@ -358,6 +358,25 @@
       }
     },
     {
+      "id": "county_ids_numeric",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "osl",
+        "boundary.county_ids": "18,55,56",
+        "boundary.country": "NOR",
+        "size": 1
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "county_gid": "whosonfirst:county:KVE:TopographicPlace:18"
+          }
+        ]
+      }
+    },
+    {
       "id": "openaddresses-address",
       "endpoint": "autocomplete",
       "status": "pass",
