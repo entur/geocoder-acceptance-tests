@@ -428,6 +428,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "geonames-child-stops",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "Skonseng stasjon",
+        "multiModal": "all"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:104",
+            "gid": "geonames:venue:NSR:StopPlace:104",
+            "layer": "venue",
+            "source": "geonames",
+            "source_id": "NSR:StopPlace:104",
+            "name": "Skonseng stasjon"
+          }
+        ]
+      }
     }
   ]
 }
