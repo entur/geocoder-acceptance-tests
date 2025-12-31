@@ -450,6 +450,22 @@
           }
         ]
       }
+    },
+    {
+      "id": "housenumber-first",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "10 schw"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "name": "Schweigaards gate 10B"
+          }
+        ]
+      }
     }
   ]
 }
