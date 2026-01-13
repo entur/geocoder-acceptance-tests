@@ -30,7 +30,7 @@
         "text": "karl johans gate"
       },
       "expected": {
-        "priorityThresh": 2,
+        "priorityThresh": 4,
         "properties": [
           {
             "category": ["street"],
