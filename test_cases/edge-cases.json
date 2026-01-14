@@ -466,6 +466,31 @@
           }
         ]
       }
+    },
+    {
+      "id": "tertitten",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "sørumsand"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58864"
+          }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "popular_name": "Sørumsand Tertitten stasjon"
+          }
+        ]
+      }
     }
+
   ]
 }
