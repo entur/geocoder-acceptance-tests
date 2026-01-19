@@ -41,6 +41,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "reverse-address",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "point.lat": "59.90977",
+        "point.lon": "10.74978",
+        "sources": "openaddresses"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "285779753",
+            "layer": "address",
+            "source": "openaddresses",
+            "source_id": "285779753",
+            "name": "Tollbugata 1A",
+            "housenumber": "1A"
+          }
+        ]
+      }
     }
   ]
 }

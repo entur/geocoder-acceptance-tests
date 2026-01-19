@@ -20,6 +20,23 @@
           }
         ]
       }
+    },
+    {
+      "id": "openaddresses",
+      "description": "Verify matrikkel lookup",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "openaddresses:address:10855461"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "10855461"
+          }
+        ]
+      }
     }
   ]
 }
