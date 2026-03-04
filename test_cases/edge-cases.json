@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "gardermoen",
+      "id": "gardermoen-popular-name",
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
@@ -53,6 +53,31 @@
             "id": "NSR:StopPlace:58211",
             "name": "Oslo lufthavn",
             "popular_name": "Gardermoen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lærdal-rådhus-no-popular-name",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "lærdal rådhus"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:34505",
+            "name": "Lærdal rådhus"
+          }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "popular_name": "Lærdal"
           }
         ]
       }
