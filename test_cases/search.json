@@ -23,11 +23,10 @@
       "endpoint": "search",
       "status": "pass",
       "in": {
-        "size": 25,
-        "text": "sons"
+        "text": "sons gate"
       },
       "expected": {
-        "priorityThresh": 25,
+        "priorityThresh": 2,
         "properties": [
           {
             "id": "KVE:TopographicPlace:0301-Sons gate"
