@@ -1,0 +1,239 @@
+{
+  "name": "Street addresses",
+  "description": "Verify presence of street addresses",
+  "tests": [
+    {
+      "id": "karjohansgate",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "karl johans gate 2"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Karl Johans gate",
+              "houseNumber": "2"
+            },
+            "name": {
+              "default": "Karl Johans gate 2",
+              "display": "Karl Johans gate 2, Sarpsborg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "karjohansgate-nonumber",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "karl johans gate"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "categories": ["street"],
+            "address": {
+              "streetName": "Karl Johans gate"
+            },
+            "name": {
+              "default": "Karl Johans gate",
+              "display": "Karl Johans gate, Sarpsborg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "strandkaien",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "strandkaien 22"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Strandkaien",
+              "houseNumber": "22"
+            },
+            "name": {
+              "display": "Strandkaien 22, Bergen"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "olavtryggvason",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "olav tryggvasons gate 35"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Olav Tryggvasons gate",
+              "houseNumber": "35"
+            },
+            "name": {
+              "display": "Olav Tryggvasons gate 35, Trondheim"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "torehund",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "tore hunds gate 65"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Tore Hunds gate",
+              "houseNumber": "65"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fjellvegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "fjellvegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Fjellvegen",
+              "houseNumber": "5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "skolevegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "skolevegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Skolevegen",
+              "houseNumber": "5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "åsvegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "åsvegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Åsvegen",
+              "houseNumber": "5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "strandvegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "strandvegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Strandvegen",
+              "houseNumber": "5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "kirkevegen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "kirkevegen 5"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Kirkevegen",
+              "houseNumber": "5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo c",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo c"
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "categories": ["vegadresse"],
+            "address": {
+              "streetName": "Oslo Gate 2C",
+              "houseNumber": "2C"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

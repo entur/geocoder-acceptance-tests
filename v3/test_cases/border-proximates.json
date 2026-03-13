@@ -1,0 +1,60 @@
+{
+  "name": "Border proximates",
+  "description": "Verify stop places near national border",
+  "tests": [
+    {
+      "id": "storskog",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "storskog",
+        "lat": 69,
+        "lon": 26
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:56863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "holtet",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "holtet",
+        "lat": 58,
+        "lon": 11
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:2947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "røst",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "røst",
+        "lat": 67,
+        "lon": 12
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:722"
+          }
+        ]
+      }
+    }
+  ]
+}

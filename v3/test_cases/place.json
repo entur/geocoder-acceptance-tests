@@ -1,0 +1,42 @@
+{
+  "name": "Place endpoint",
+  "description": "Verify place endpoint",
+  "tests": [
+    {
+      "id": "gosp",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "NSR:GroupOfStopPlaces:1,NSR:GroupOfStopPlaces:10"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          },
+          {
+            "id": "NSR:GroupOfStopPlaces:10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "openaddresses",
+      "description": "Verify matrikkel lookup. NOTE: v3 extra.id stores the full prefixed ID",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "KVE:PostalAddress:10855461"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "KVE:PostalAddress:10855461"
+          }
+        ]
+      }
+    }
+  ]
+}

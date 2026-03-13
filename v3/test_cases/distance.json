@@ -1,0 +1,66 @@
+{
+  "name": "Distance",
+  "description": "Verify results near focus point",
+  "tests": [
+    {
+      "id": "oslosdist",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo s",
+        "lat": 59.91703,
+        "lon": 10.72742
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "name": {
+              "default": "Oslo S"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "trondheimsdist",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "trondheim s",
+        "lat": 63.42692,
+        "lon": 10.39690
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "name": {
+              "default": "Trondheim S"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vardødist",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "vardø",
+        "lat": 63.42692,
+        "lon": 10.39690
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "name": {
+              "default": "Vardø"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

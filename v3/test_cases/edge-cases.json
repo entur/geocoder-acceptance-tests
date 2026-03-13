@@ -1,0 +1,554 @@
+{
+  "name": "Edge cases",
+  "description": "Results that required some tweaks",
+  "tests": [
+    {
+      "id": "kaia kafe",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "kaia kafe"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "address": {
+              "county": "Nordland",
+              "countyId": "KVE:TopographicPlace:18",
+              "locality": "Narvik",
+              "localityId": "KVE:TopographicPlace:1806"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "grünerløkka",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "grünerløkka"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "categories": [
+              "bydel"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gardermoen-popular-name",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "gardermoen"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58211",
+            "name": {
+              "default": "Oslo lufthavn",
+              "label": "Gardermoen"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lærdal-rådhus-no-popular-name",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "lærdal rådhus"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:34505",
+            "name": {
+              "default": "Lærdal rådhus"
+            }
+          }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "name": {
+              "label": "Lærdal"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo sentralstasjon",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo sentralstasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59872",
+            "name": {
+              "default": "Oslo S"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "odeon oslo",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "odeon oslo"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {
+              "default": "ODEON Oslo"
+            },
+            "categories": [
+              "poi",
+              "cinema"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslodistance",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo",
+        "lat": 59.95501,
+        "lon": 9.46593
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {
+              "default": "Oslo"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergensentrum",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "bergen sentrum"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:174",
+            "name": {
+              "default": "Bergen sentrum",
+              "display": "Bergen sentrum, Bergen"
+            },
+            "address": {
+              "county": "Vestland",
+              "countryCode": "no",
+              "countyId": "KVE:TopographicPlace:46",
+              "locality": "Bergen",
+              "localityId": "KVE:TopographicPlace:4601"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "altahøyden",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "altahøyden"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "address": {
+              "county": "Finnmark"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergenpoliti",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "bergen sentrum politistasjon"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "OSM:PointOfInterest:2624518"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reverse-layers-filter",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "lat": 60.060936,
+        "lon": 10.309086,
+        "layers": "stopPlace",
+        "limit": 50,
+        "radius": 2.5
+      },
+      "unexpected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "layer": "address"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reverse-housenumber",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "lat": 60.060936,
+        "lon": 10.309086
+      },
+      "unexpected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "address": {
+              "houseNumber": "7"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nsr-whosonfirst-openstreetmap-parent",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "vippetangen ferjeterminal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59222",
+            "layer": "stopPlace",
+            "source": "nsr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nsr-whosonfirst-openstreetmap-nonparent",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo gate"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:6520",
+            "layer": "stopPlace",
+            "source": "nsr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lille",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "lille"
+      },
+      "unexpected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "name": {
+              "default": "Lille Lerresfjord kai"
+            }
+          },
+          {
+            "name": {
+              "default": "Lille Survik kai"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "Lille-uppercase",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "Lille"
+      },
+      "unexpected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "name": {
+              "default": "Lille Lerresfjord kai"
+            }
+          },
+          {
+            "name": {
+              "default": "Lille Survik kai"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "jernbanetorget-description",
+      "endpoint": "autocomplete",
+      "status": "fail",
+      "description": "Skipped: v3 does not include description field",
+      "in": {
+        "q": "jernbanetorget",
+        "multimodal": "all",
+        "limit": 20
+      },
+      "expected": {
+        "priorityThresh": 20,
+        "properties": [
+          {}
+        ]
+      }
+    },
+    {
+      "id": "ullerud-stop-first",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ullerud"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:5496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslovägen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo",
+        "countries": "se"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "name": {
+              "default": "Oslovägen"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "county_ids",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "osl",
+        "countyIds": "KVE:TopographicPlace:18,KVE:TopographicPlace:55,KVE:TopographicPlace:56",
+        "countries": "no",
+        "limit": 1
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "address": {
+              "countyId": "KVE:TopographicPlace:18"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "county_ids_full",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "osl",
+        "countyIds": "KVE:TopographicPlace:18,KVE:TopographicPlace:55,KVE:TopographicPlace:56",
+        "countries": "no",
+        "limit": 1
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "address": {
+              "countyId": "KVE:TopographicPlace:18"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "openaddresses-address",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "romsdalveien",
+        "countyIds": "KVE:TopographicPlace:56",
+        "sources": "kartverket-matrikkelenadresse",
+        "limit": 20
+      },
+      "expected": {
+        "priorityThresh": 20,
+        "properties": [
+          {
+            "address": {
+              "houseNumber": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "openaddresses-address-short-token",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "nils gotlands veg",
+        "sources": "kartverket-matrikkelenadresse",
+        "limit": 30
+      },
+      "expected": {
+        "priorityThresh": 30,
+        "properties": [
+          {
+            "address": {
+              "houseNumber": "14"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "glassverket-moss",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "glassverket moss"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:3018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "geonames-child-stops",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "Skonseng stasjon",
+        "multimodal": "all"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:104",
+            "layer": "stopPlace",
+            "source": "nsr",
+            "name": {
+              "default": "Skonseng stasjon"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "housenumber-first",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "10 schw"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "name": {
+              "default": "Schweigaards gate 10B"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "tertitten",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "sørumsand"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58864"
+          }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "name": {
+              "label": "Sørumsand Tertitten stasjon"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

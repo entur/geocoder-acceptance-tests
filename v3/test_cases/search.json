@@ -1,0 +1,38 @@
+{
+  "name": "Search endpoint",
+  "description": "Verify search endpoint (almost identical to autocomplete)",
+  "tests": [
+    {
+      "id": "sons",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "sons"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59639"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sons2",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "sons gate"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:0301-Sons gate"
+          }
+        ]
+      }
+    }
+  ]
+}

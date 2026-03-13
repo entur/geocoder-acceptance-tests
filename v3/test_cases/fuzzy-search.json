@@ -1,0 +1,70 @@
+{
+  "name": "Fuzzy search",
+  "description": "Verify fuzzy search with common spelling mistakes / variations",
+  "tests": [
+    {
+      "id": "oslo1",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "olso"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Oslo1-uppercase",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "Olso"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "movig",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "møvig"
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "name": {"default": "Møvik"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "wiens",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "wiens"
+      },
+      "expected": {
+        "priorityThresh": 6,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:1043"
+          }
+        ]
+      }
+    }
+  ]
+}

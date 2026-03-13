@@ -1,0 +1,38 @@
+{
+  "name": "POI presence",
+  "description": "Verify presence of places of interests from different categories",
+  "tests": [
+    {
+      "id": "sykehus",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "Stokmarknes sykehus"
+      },
+      "expected": {
+        "priorityThresh": 50,
+        "properties": [
+          {
+            "categories": ["poi"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "skole",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "Hebekk skole"
+      },
+      "expected": {
+        "priorityThresh": 50,
+        "properties": [
+          {
+            "categories": ["poi"]
+          }
+        ]
+      }
+    }
+  ]
+}

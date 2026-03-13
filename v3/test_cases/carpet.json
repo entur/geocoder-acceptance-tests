@@ -1,0 +1,214 @@
+{
+  "name": "Carpet",
+  "description": "'Random' tests across the country",
+  "tests": [
+    {
+      "id": "sogndal",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "sogndal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Sogndal"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "kongsvinger",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "kongsvinger"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Kongsvinger stasjon"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "sandnes",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "sandnes"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Sandnes"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "ålesund",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ålesund"
+      },
+      "expected": {
+        "priorityThresh": 9,
+        "properties": [
+          {
+            "name": {"default": "Ålesund"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "røros",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "røros"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Røros"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "rjukan",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "rjukan"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Rjukan"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "flekkefjord",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "flekkefjord"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Flekkefjord"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "stjørdal",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "stjørdal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Stjørdal"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "mosjøen",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "mosjøen"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Mosjøen"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "fauske",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "fauske"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Fauske"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "harstad",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "harstad"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Harstad"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "landskronaveien",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "landskronaveien"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": {"default": "Landskronaveien"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "alta",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "alta"
+      },
+      "expected": {
+        "priorityThresh": 4,
+        "properties": [
+          {
+            "name": {"default": "Alta lufthavn"}
+          }
+        ]
+      }
+    }
+  ]
+}

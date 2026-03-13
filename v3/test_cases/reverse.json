@@ -1,0 +1,72 @@
+{
+  "name": "Reverse endpoint",
+  "description": "Verify reverse endpoint",
+  "tests": [
+    {
+      "id": "reverse",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "lat": "59.91107",
+        "lon": "10.748128"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          },
+          {
+            "id": "OSM:PointOfInterest:5878221985"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reverse-with-boundary",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "lat": "59.91107",
+        "lon": "10.748128",
+        "layers": "stopPlace",
+        "multimodal": "parent",
+        "radius": "0.1"
+      },
+      "unexpected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58366"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reverse-address",
+      "endpoint": "reverse",
+      "status": "pass",
+      "in": {
+        "lat": "59.90977",
+        "lon": "10.74978",
+        "sources": "kartverket-matrikkelenadresse"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "KVE:PostalAddress:285779753",
+            "layer": "address",
+            "source": "kartverket-matrikkelenadresse",
+            "name": {
+              "default": "Tollbugata 1A"
+            },
+            "address": {
+              "houseNumber": "1A"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
