@@ -47,7 +47,7 @@
         "text": "gardermoen"
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 1,
         "properties": [
           {
             "id": "NSR:StopPlace:58211",
@@ -275,16 +275,16 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "lille"
+        "text": "lilles"
       },
-      "unexpected": {
-        "priorityThresh": 4,
+      "expected": {
+        "priorityThresh": 6,
         "properties": [
           {
-            "name": "Lille Lerresfjord kai"
+            "id": "NSR:StopPlace:62790"
           },
           {
-            "name": "Lille Survik kai"
+            "id": "NSR:StopPlace:62339"
           }
         ]
       }
