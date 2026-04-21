@@ -55,10 +55,11 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "wiens"
+        "text": "wiens",
+        "size": 12
       },
       "expected": {
-        "priorityThresh": 9,
+        "priorityThresh": 12,
         "properties": [
           {
             "id": "NSR:StopPlace:1043"
