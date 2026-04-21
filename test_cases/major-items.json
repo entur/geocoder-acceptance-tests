@@ -161,6 +161,22 @@
           }
         ]
       }
+    },
+    {
+      "id": "stoa",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "stoa"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:62352"
+          }
+        ]
+      }
     }
   ]
 }
