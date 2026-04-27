@@ -48,7 +48,7 @@
         "lon": 12.6
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 5,
         "properties": [
           {
             "id": "NSR:StopPlace:46483"
