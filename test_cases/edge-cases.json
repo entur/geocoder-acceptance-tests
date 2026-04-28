@@ -294,7 +294,8 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "text": "Lille"
+        "text": "Lille",
+        "size": 10
       },
       "unexpected": {
         "priorityThresh": 4,
