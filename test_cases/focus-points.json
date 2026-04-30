@@ -48,13 +48,39 @@
         "focus.point.lon": 12.6
       },
       "expected": {
-        "priorityThresh": 5,
+        "priorityThresh": 3,
         "properties": [
           {
             "id": "NSR:StopPlace:46483"
           }
         ]
       }
+    },
+    {
+      "id": "os",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "os",
+        "focus.point.lat": 59.91130,
+        "focus.point.lon": 10.74161,
+        "size": 30
+      },
+      "expected": {
+        "priorityThresh": 15,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:2479"
+          },
+          {
+            "id": "133286"
+          },
+          {
+            "id": "NSR:StopPlace:57545"
+          }
+        ]
+      }
     }
+
   ]
 }
