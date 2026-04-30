@@ -58,7 +58,7 @@
         "q": "wiens"
       },
       "expected": {
-        "priorityThresh": 6,
+        "priorityThresh": 9,
         "properties": [
           {
             "id": "NSR:StopPlace:1043"

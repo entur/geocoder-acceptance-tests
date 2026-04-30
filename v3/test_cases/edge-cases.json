@@ -49,7 +49,7 @@
         "q": "gardermoen"
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 1,
         "properties": [
           {
             "id": "NSR:StopPlace:58211",
@@ -292,20 +292,16 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "q": "lille"
+        "q": "lilles"
       },
-      "unexpected": {
-        "priorityThresh": 4,
+      "expected": {
+        "priorityThresh": 6,
         "properties": [
           {
-            "name": {
-              "default": "Lille Lerresfjord kai"
-            }
+            "id": "NSR:StopPlace:62790"
           },
           {
-            "name": {
-              "default": "Lille Survik kai"
-            }
+            "id": "NSR:StopPlace:62339"
           }
         ]
       }
@@ -545,6 +541,24 @@
           {
             "name": {
               "label": "Sørumsand Tertitten stasjon"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pøylo",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "pøylo"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "name": {
+              "default": "Marikoven Pøylo"
             }
           }
         ]
