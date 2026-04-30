@@ -30,7 +30,7 @@
         "focus.point.lon": 11
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 4,
         "properties": [
           {
             "id": "NSR:StopPlace:2947"
