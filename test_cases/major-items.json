@@ -19,6 +19,37 @@
       }
     },
     {
+      "id": "oslo s",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo s",
+        "size": 30
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1"
+          }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 30,
+        "properties": [
+          {
+            "name": "Lio's Cafe Bar"
+          },
+          {
+            "name": "Tiffany’s"
+          },
+          {
+            "name": "Stockfleth's"
+          }
+        ]
+      }
+    },
+    {
       "id": "oslo2",
       "endpoint": "autocomplete",
       "status": "pass",
