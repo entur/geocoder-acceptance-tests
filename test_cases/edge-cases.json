@@ -487,7 +487,8 @@
         "priorityThresh": 10,
         "properties": [
           {
-            "name": "Schweigaards gate 10B"
+            "name": "Schweigaards gate 10",
+            "county": "Oslo"
           }
         ]
       }
