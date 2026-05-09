@@ -10,7 +10,7 @@
         "text": "oslo"
       },
       "expected": {
-        "priorityThresh": 4,
+        "priorityThresh": 1,
         "properties": [
           {
             "id": "NSR:GroupOfStopPlaces:1"
@@ -105,9 +105,27 @@
         "text": "bergen"
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 1,
         "properties": [
           {
+            "name": "Bergen sentrum",
+            "id": "NSR:GroupOfStopPlaces:174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen1b",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "bergen"
+      },
+      "expected": {
+        "priorityThresh": 5,
+        "properties": [
+          {
+            "name": "Bergen",
             "id": "NSR:GroupOfStopPlaces:7"
           }
         ]
@@ -219,10 +237,10 @@
         "focus.point.lon": 10.745737
       },
       "expected": {
-        "priorityThresh": 1,
+        "priorityThresh": 5,
         "properties": [
           {
-            "id": "NSR:GroupOfStopPlaces:7"
+            "id": "NSR:GroupOfStopPlaces:174"
           }
         ]
       }

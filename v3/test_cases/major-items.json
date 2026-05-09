@@ -74,9 +74,27 @@
         "q": "bergen"
       },
       "expected": {
-        "priorityThresh": 10,
+        "priorityThresh": 1,
         "properties": [
           {
+            "name": "Bergen sentrum",
+            "id": "NSR:GroupOfStopPlaces:174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen1b",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "bergen"
+      },
+      "expected": {
+        "priorityThresh": 5,
+        "properties": [
+          {
+            "name": "Bergen",
             "id": "NSR:GroupOfStopPlaces:7"
           }
         ]
