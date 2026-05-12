@@ -642,7 +642,7 @@
         "q": "ålesund"
       },
       "expected": {
-        "priorityThresh": 3,
+        "priorityThresh": 2,
         "properties": [
           {
             "id": "NSR:StopPlace:59277",
