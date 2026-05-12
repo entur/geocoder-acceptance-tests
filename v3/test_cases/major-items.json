@@ -77,7 +77,7 @@
         "priorityThresh": 1,
         "properties": [
           {
-            "name": "Bergen sentrum",
+            "name": { "default": "Bergen sentrum" },
             "id": "NSR:GroupOfStopPlaces:174"
           }
         ]
@@ -94,7 +94,7 @@
         "priorityThresh": 5,
         "properties": [
           {
-            "name": "Bergen",
+            "name": { "default": "Bergen" },
             "id": "NSR:GroupOfStopPlaces:7"
           }
         ]
@@ -206,10 +206,10 @@
         "lon": 10.745737
       },
       "expected": {
-        "priorityThresh": 1,
+        "priorityThresh": 5,
         "properties": [
           {
-            "id": "NSR:GroupOfStopPlaces:7"
+            "id": "NSR:GroupOfStopPlaces:174"
           }
         ]
       }

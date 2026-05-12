@@ -233,6 +233,38 @@
       }
     },
     {
+      "id": "only-stopplaces-and-gosp",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo",
+        "layers": "stopPlace,groupOfStopPlaces",
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1",
+            "layer": "groupOfStopPlaces"
+          },
+          {
+            "id": "NSR:StopPlace:59872",
+            "layer": "stopPlace"
+          }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [
+          { "layer": "poi" },
+          { "layer": "address" },
+          { "layer": "street" },
+          { "layer": "place" }
+        ]
+      }
+    },
+    {
       "id": "reverse-housenumber",
       "endpoint": "reverse",
       "status": "pass",

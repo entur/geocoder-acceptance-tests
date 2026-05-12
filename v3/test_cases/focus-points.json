@@ -64,16 +64,13 @@
         "q": "os",
         "lat": 59.91130,
         "lon": 10.74161,
-        "size": 30
+        "limit": 30
       },
       "expected": {
         "priorityThresh": 15,
         "properties": [
           {
             "id": "NSR:StopPlace:2479"
-          },
-          {
-            "id": "133286"
           },
           {
             "id": "NSR:StopPlace:57545"

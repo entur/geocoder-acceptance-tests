@@ -216,6 +216,30 @@
       }
     },
     {
+      "id": "only-stopplaces-and-gosp",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo",
+        "layers": "venue,address",
+        "categories": "GroupOfStopPlaces,onstreetBus,onstreetTram,airport,railStation,metroStation,busStation,coachStation,tramStation,harbourPort,ferryPort,ferryStop,liftStation,vehicleRailInterchange",
+        "size": 10
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:1",
+            "layer": "address"
+          },
+          {
+            "id": "NSR:StopPlace:59872",
+            "layer": "venue"
+          }
+        ]
+      }
+    },
+    {
       "id": "reverse-housenumber",
       "endpoint": "reverse",
       "status": "pass",
