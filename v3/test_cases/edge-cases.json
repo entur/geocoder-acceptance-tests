@@ -595,6 +595,63 @@
           }
         ]
       }
+    },
+    {
+      "id": "utfarten",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "utfarten"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:10680",
+            "name": {
+              "default": "Utfarten"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "stavanger-stasjon",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "stavanger"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:61291",
+            "name": {
+              "default": "Stavanger stasjon"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ålesund-lufthavn",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ålesund"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59277",
+            "name": {
+              "default": "Ålesund lufthavn"
+            }
+          }
+        ]
+      }
     }
   ]
 }
