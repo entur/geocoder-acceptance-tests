@@ -250,6 +250,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "trondheim-from-oslo",
+      "description": "Far-focus major city must beat near-focus same-prefix streets after the importance-clamp change.",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "trondheim",
+        "lat": 59.908822,
+        "lon": 10.745737
+      },
+      "expected": {
+        "priorityThresh": 5,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stavanger-from-oslo",
+      "description": "Far-focus major city must beat near-focus same-prefix streets after the importance-clamp change.",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "stavanger",
+        "lat": 59.908822,
+        "lon": 10.745737
+      },
+      "expected": {
+        "priorityThresh": 5,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:8"
+          }
+        ]
+      }
     }
   ]
 }
