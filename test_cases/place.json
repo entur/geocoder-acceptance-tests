@@ -37,6 +37,23 @@
           }
         ]
       }
+    },
+    {
+      "id": "osm",
+      "description": "Verify osm lookup",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "OSM:TopographicPlace:545260792"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "OSM:TopographicPlace:545260792"
+          }
+        ]
+      }
     }
   ]
 }
