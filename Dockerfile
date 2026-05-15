@@ -2,7 +2,7 @@ FROM google/cloud-sdk:alpine
 
 ENV NODE_VERSION=24.10.0
 
-RUN apk add --no-cache curl
+RUN apk add --no-cache curl libstdc++
 
 RUN ARCH=$( [ "$TARGETARCH" = "arm64" ] && echo "arm64" || echo "x64" ) && \
     curl -fsSL "https://unofficial-builds.nodejs.org/download/release/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-${ARCH}-musl.tar.xz" \
