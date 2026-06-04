@@ -54,6 +54,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "street-with-spaces",
+      "description": "Street id lookup with spaces in the name (transliterated to Photon-safe category on both index and query side)",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "KVE:TopographicPlace:0301-Karl Johans gate"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:0301-Karl Johans gate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "street-with-diacritics",
+      "description": "Street id lookup with Norwegian characters (oe transliteration must match between converter and proxy)",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "KVE:TopographicPlace:3407-Fahlstrøms plass"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:3407-Fahlstrøms plass"
+          }
+        ]
+      }
     }
   ]
 }

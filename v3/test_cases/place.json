@@ -40,17 +40,51 @@
     },
     {
       "id": "osm",
-      "description": "Verify osm lookup",
+      "description": "Verify osm lookup. v3 uses OSM:TopographicPlace (same shape as v2)",
       "endpoint": "place",
       "status": "pass",
       "in": {
-        "ids": "OSM:PointOfInterest:545260792"
+        "ids": "OSM:TopographicPlace:545260792"
       },
       "expected": {
         "priorityThresh": 1,
         "properties": [
           {
-            "id": "OSM:PointOfInterest:545260792"
+            "id": "OSM:TopographicPlace:545260792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "street-with-spaces",
+      "description": "Street id lookup with spaces in the name (transliterated to Photon-safe category on both index and query side)",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "KVE:TopographicPlace:0301-Karl Johans gate"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:0301-Karl Johans gate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "street-with-diacritics",
+      "description": "Street id lookup with Norwegian characters (ø -> oe transliteration must match between converter and proxy)",
+      "endpoint": "place",
+      "status": "pass",
+      "in": {
+        "ids": "KVE:TopographicPlace:3407-Fahlstrøms plass"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:3407-Fahlstrøms plass"
           }
         ]
       }
