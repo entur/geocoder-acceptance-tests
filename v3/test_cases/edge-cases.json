@@ -652,6 +652,20 @@
           }
         ]
       }
+    },
+    {
+      "id": "limit-honored",
+      "description": "limit caps the number of returned features",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo",
+        "limit": 5
+      },
+      "expected": {
+        "size": "<= 5",
+        "properties": []
+      }
     }
   ]
 }

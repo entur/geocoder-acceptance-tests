@@ -11,6 +11,9 @@
       },
       "expected": {
         "priorityThresh": 4,
+        "coordinates": [
+          [10.748128, 59.911076]
+        ],
         "properties": [
           {
             "id": "NSR:GroupOfStopPlaces:1"

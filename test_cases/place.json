@@ -11,9 +11,14 @@
       },
       "expected": {
         "priorityThresh": 2,
+        "coordinates": [
+          [10.748128, 59.911076]
+        ],
         "properties": [
           {
-            "id": "NSR:GroupOfStopPlaces:1"
+            "id": "NSR:GroupOfStopPlaces:1",
+            "name": "Oslo",
+            "label": "Oslo"
           },
           {
             "id": "NSR:GroupOfStopPlaces:10"
@@ -31,9 +36,17 @@
       },
       "expected": {
         "priorityThresh": 1,
+        "coordinates": [
+          [9.664788, 59.320199]
+        ],
         "properties": [
           {
-            "id": "10855461"
+            "id": "10855461",
+            "layer": "address",
+            "name": "Grorudveien 88",
+            "street": "Grorudveien",
+            "housenumber": "88",
+            "postalcode": "3748"
           }
         ]
       }

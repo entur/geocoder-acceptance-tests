@@ -623,6 +623,20 @@
           }
         ]
       }
+    },
+    {
+      "id": "limit-honored",
+      "description": "size caps the number of returned features",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "oslo",
+        "size": 5
+      },
+      "expected": {
+        "size": "<= 5",
+        "properties": []
+      }
     }
   ]
 }

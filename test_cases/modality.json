@@ -61,7 +61,9 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "category": ["railStation", "onstreetBus", "busStation", "airport" ]
+            "category": ["railStation", "onstreetBus", "busStation", "airport" ],
+            "mode": [{"rail": null}, {"bus": null}, {"air": null}],
+            "tariff_zones": ["INN:TariffZone:421", "RUT:TariffZone:4N", "RUT:FareZone:1"]
           }
         ]
       }
