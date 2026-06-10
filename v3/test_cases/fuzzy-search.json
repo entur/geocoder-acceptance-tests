@@ -45,7 +45,7 @@
         "priorityThresh": 10,
         "properties": [
           {
-            "name": {"default": "Møvik"}
+            "names": {"default": "Møvik"}
           }
         ]
       }

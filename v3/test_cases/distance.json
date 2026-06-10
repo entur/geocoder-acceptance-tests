@@ -15,7 +15,7 @@
         "priorityThresh": 2,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Oslo S"
             }
           }
@@ -35,7 +35,7 @@
         "priorityThresh": 2,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Trondheim S"
             }
           }
@@ -55,7 +55,7 @@
         "priorityThresh": 2,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Vardø"
             }
           }

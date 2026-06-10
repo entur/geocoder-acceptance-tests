@@ -18,7 +18,7 @@
               "streetName": "Karl Johans gate",
               "houseNumber": "2"
             },
-            "name": {
+            "names": {
               "default": "Karl Johans gate 2",
               "display": "Karl Johans gate 2, Sarpsborg"
             }
@@ -41,7 +41,7 @@
             "address": {
               "streetName": "Karl Johans gate"
             },
-            "name": {
+            "names": {
               "default": "Karl Johans gate",
               "display": "Karl Johans gate, Sarpsborg"
             }
@@ -65,7 +65,7 @@
               "streetName": "Strandkaien",
               "houseNumber": "22"
             },
-            "name": {
+            "names": {
               "display": "Strandkaien 22, Bergen"
             }
           }
@@ -88,7 +88,7 @@
               "streetName": "Olav Tryggvasons gate",
               "houseNumber": "35"
             },
-            "name": {
+            "names": {
               "display": "Olav Tryggvasons gate 35, Trondheim"
             }
           }

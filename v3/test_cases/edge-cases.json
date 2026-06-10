@@ -53,7 +53,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:58211",
-            "name": {
+            "names": {
               "default": "Oslo lufthavn",
               "label": "Gardermoen"
             }
@@ -73,7 +73,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:34505",
-            "name": {
+            "names": {
               "default": "Lærdal rådhus"
             }
           }
@@ -83,7 +83,7 @@
         "priorityThresh": 1,
         "properties": [
           {
-            "name": {
+            "names": {
               "label": "Lærdal"
             }
           }
@@ -102,7 +102,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:59872",
-            "name": {
+            "names": {
               "default": "Oslo S"
             }
           }
@@ -120,7 +120,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "ODEON Oslo"
             },
             "categories": [
@@ -144,7 +144,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Oslo"
             }
           }
@@ -163,7 +163,7 @@
         "properties": [
           {
             "id": "NSR:GroupOfStopPlaces:174",
-            "name": {
+            "names": {
               "default": "Bergen sentrum",
               "display": "Bergen sentrum, Bergen"
             },
@@ -207,7 +207,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "id": "OSM:PointOfInterest:2624518"
+            "id": "OSM:TopographicPlace:2624518"
           }
         ]
       }
@@ -349,12 +349,12 @@
         "priorityThresh": 4,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Lille Lerresfjord kai"
             }
           },
           {
-            "name": {
+            "names": {
               "default": "Lille Survik kai"
             }
           }
@@ -406,7 +406,7 @@
         "priorityThresh": 1,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Oslovägen"
             }
           }
@@ -527,7 +527,7 @@
             "id": "NSR:StopPlace:104",
             "layer": "stopPlace",
             "source": "nsr",
-            "name": {
+            "names": {
               "default": "Skonseng stasjon"
             }
           }
@@ -545,7 +545,7 @@
         "priorityThresh": 10,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Schweigaards gate 10B"
             }
           }
@@ -571,7 +571,7 @@
         "priorityThresh": 2,
         "properties": [
           {
-            "name": {
+            "names": {
               "label": "Sørumsand Tertitten stasjon"
             }
           }
@@ -589,7 +589,7 @@
         "priorityThresh": 1,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Marikoven Pøylo"
             }
           }
@@ -608,7 +608,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:10680",
-            "name": {
+            "names": {
               "default": "Utfarten"
             }
           }
@@ -627,7 +627,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:61291",
-            "name": {
+            "names": {
               "default": "Stavanger stasjon"
             }
           }
@@ -646,7 +646,7 @@
         "properties": [
           {
             "id": "NSR:StopPlace:59277",
-            "name": {
+            "names": {
               "default": "Ålesund lufthavn"
             }
           }

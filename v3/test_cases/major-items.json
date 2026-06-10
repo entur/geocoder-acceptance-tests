@@ -38,17 +38,17 @@
         "priorityThresh": 30,
         "properties": [
           {
-            "name": {
+            "names": {
               "default": "Lio's Cafe Bar"
             }
           },
           {
-            "name": {
+            "names": {
               "default": "Tiffany’s"
             }
           },
           {
-            "name": {
+            "names": {
               "default": "Stockfleth's"
             }
           }
@@ -114,7 +114,7 @@
         "priorityThresh": 1,
         "properties": [
           {
-            "name": { "default": "Bergen sentrum" },
+            "names": { "default": "Bergen sentrum" },
             "id": "NSR:GroupOfStopPlaces:174"
           }
         ]
@@ -131,7 +131,7 @@
         "priorityThresh": 5,
         "properties": [
           {
-            "name": { "default": "Bergen" },
+            "names": { "default": "Bergen" },
             "id": "NSR:GroupOfStopPlaces:7"
           }
         ]

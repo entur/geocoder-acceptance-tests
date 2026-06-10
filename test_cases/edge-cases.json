@@ -607,6 +607,22 @@
           }
         ]
       }
+    },
+    {
+      "id": "o-sole-mio",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "o'so"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "name": "O' Sole Mio"
+          }
+        ]
+      }
     }
   ]
 }
