@@ -265,6 +265,56 @@
       }
     },
     {
+      "id": "layers-and-stopplacetypes-union",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo",
+        "layers": "stopPlace,groupOfStopPlaces",
+        "stopPlaceTypes": "railStation",
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          { "id": "NSR:GroupOfStopPlaces:1", "layer": "groupOfStopPlaces" },
+          { "id": "NSR:StopPlace:59872", "layer": "stopPlace" }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [
+          { "layer": "poi" },
+          { "layer": "address" },
+          { "layer": "street" },
+          { "layer": "place" }
+        ]
+      }
+    },
+    {
+      "id": "stopplacetypes-still-constrains-stopplace-layer-in-union",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo",
+        "layers": "stopPlace,groupOfStopPlaces",
+        "stopPlaceTypes": "airport",
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 10,
+        "properties": [
+          { "id": "NSR:GroupOfStopPlaces:1", "layer": "groupOfStopPlaces" }
+        ]
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [
+          { "id": "NSR:StopPlace:59872" }
+        ]
+      }
+    },
+    {
       "id": "reverse-housenumber",
       "endpoint": "reverse",
       "status": "pass",
