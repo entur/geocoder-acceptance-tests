@@ -104,7 +104,8 @@
             "id": "NSR:StopPlace:59872",
             "names": {
               "default": "Oslo S"
-            }
+            },
+            "stopPlaceRole": "parent"
           }
         ]
       }
@@ -439,7 +440,8 @@
         "priorityThresh": 1,
         "properties": [
           {
-            "id": "NSR:StopPlace:5496"
+            "id": "NSR:StopPlace:5496",
+            "stopPlaceRole": "standalone"
           }
         ]
       }
@@ -579,7 +581,8 @@
             "source": "nsr",
             "names": {
               "default": "Skonseng stasjon"
-            }
+            },
+            "stopPlaceRole": "child"
           }
         ]
       }
