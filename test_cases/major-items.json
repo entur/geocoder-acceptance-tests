@@ -180,6 +180,87 @@
       }
     },
     {
+      "id": "ber-bergen-sentrum",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "ber"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ber-bergen-stasjon",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "ber"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "berlin-still-findable",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "berlin"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "berge-bergen-sentrum",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "berge"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "berge-berge-stopplace",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "berge"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "layer": "venue",
+            "name": "Berge"
+          }
+        ]
+      }
+    },
+    {
       "id": "trondheim1",
       "endpoint": "autocomplete",
       "status": "pass",

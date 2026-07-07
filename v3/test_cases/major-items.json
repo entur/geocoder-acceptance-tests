@@ -189,6 +189,94 @@
       }
     },
     {
+      "id": "ber-bergen-sentrum",
+      "description": "For the bare prefix 'ber', the Bergen stop group is the top result (#1). Together with ber-bergen-stasjon this pins Bergen stasjon at #2.",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ber"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ber-bergen-stasjon",
+      "description": "For the bare prefix 'ber', Bergen stasjon must be the #2 result, right after Bergen sentrum at #1 (see ber-bergen-sentrum). Guards the regression where per-type place-name importance buried real stops under a wall of small settlements (Bergen stasjon fell to ~#12).",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ber"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "berlin-still-findable",
+      "description": "The non-Norwegian penalty demotes Berlin for ambiguous prefixes but must not hide it when searched by name.",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "berlin"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "berge-bergen-sentrum",
+      "description": "For 'berge', the Bergen stop group is the top result. Guards the regression where boosted place-names crowded above it (the GOSP fell to #3).",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "berge"
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:174"
+          }
+        ]
+      }
+    },
+    {
+      "id": "berge-berge-stopplace",
+      "description": "For 'berge', a 'Berge' stopplace must be the #2 result (right after Bergen sentrum) - real stops must outrank the 'Berge' place-names. Matched by layer+name because the several near-tied Berge stops swap positions.",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "berge"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "layer": "stopPlace",
+            "names": {
+              "default": "Berge"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "trondheim1",
       "endpoint": "autocomplete",
       "status": "pass",
