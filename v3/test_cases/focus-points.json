@@ -12,7 +12,7 @@
         "lon": 7.04
       },
       "expected": {
-        "priorityThresh": 4,
+        "priorityThresh": 5,
         "properties": [
           {
             "id": "KVE:TopographicPlace:4205-Haugen"
