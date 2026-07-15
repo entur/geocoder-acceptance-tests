@@ -28,7 +28,7 @@
       "in": {
         "text": "trondheim s",
         "focus.point.lat": 63.42692,
-        "focus.point.lon": 10.39690
+        "focus.point.lon": 10.3969
       },
       "expected": {
         "priorityThresh": 2,
@@ -47,7 +47,7 @@
       "in": {
         "text": "vardø",
         "focus.point.lat": 63.42692,
-        "focus.point.lon": 10.39690
+        "focus.point.lon": 10.3969
       },
       "expected": {
         "priorityThresh": 2,

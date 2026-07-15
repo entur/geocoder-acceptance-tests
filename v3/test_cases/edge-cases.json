@@ -34,9 +34,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "categories": [
-              "bydel"
-            ]
+            "categories": ["bydel"]
           }
         ]
       }
@@ -124,10 +122,7 @@
             "names": {
               "default": "ODEON Oslo"
             },
-            "categories": [
-              "poi",
-              "cinema"
-            ]
+            "categories": ["poi", "cinema"]
           }
         ]
       }
@@ -310,9 +305,7 @@
       },
       "unexpected": {
         "priorityThresh": 10,
-        "properties": [
-          { "id": "NSR:StopPlace:59872" }
-        ]
+        "properties": [{ "id": "NSR:StopPlace:59872" }]
       }
     },
     {
@@ -424,9 +417,7 @@
       },
       "expected": {
         "priorityThresh": 20,
-        "properties": [
-          {}
-        ]
+        "properties": [{}]
       }
     },
     {

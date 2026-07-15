@@ -13,7 +13,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Sogndal"}
+            "names": { "default": "Sogndal" }
           }
         ]
       }
@@ -29,7 +29,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Kongsvinger stasjon"}
+            "names": { "default": "Kongsvinger stasjon" }
           }
         ]
       }
@@ -45,7 +45,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Sandnes"}
+            "names": { "default": "Sandnes" }
           }
         ]
       }
@@ -61,7 +61,7 @@
         "priorityThresh": 9,
         "properties": [
           {
-            "names": {"default": "Ålesund"}
+            "names": { "default": "Ålesund" }
           }
         ]
       }
@@ -77,7 +77,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Røros"}
+            "names": { "default": "Røros" }
           }
         ]
       }
@@ -93,7 +93,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Rjukan"}
+            "names": { "default": "Rjukan" }
           }
         ]
       }
@@ -109,7 +109,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Flekkefjord"}
+            "names": { "default": "Flekkefjord" }
           }
         ]
       }
@@ -125,7 +125,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Stjørdal"}
+            "names": { "default": "Stjørdal" }
           }
         ]
       }
@@ -141,7 +141,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Mosjøen"}
+            "names": { "default": "Mosjøen" }
           }
         ]
       }
@@ -157,7 +157,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Fauske"}
+            "names": { "default": "Fauske" }
           }
         ]
       }
@@ -173,7 +173,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Harstad"}
+            "names": { "default": "Harstad" }
           }
         ]
       }
@@ -189,7 +189,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "names": {"default": "Landskronaveien"}
+            "names": { "default": "Landskronaveien" }
           }
         ]
       }
@@ -205,7 +205,7 @@
         "priorityThresh": 4,
         "properties": [
           {
-            "names": {"default": "Alta lufthavn"}
+            "names": { "default": "Alta lufthavn" }
           }
         ]
       }

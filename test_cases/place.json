@@ -11,9 +11,7 @@
       },
       "expected": {
         "priorityThresh": 2,
-        "coordinates": [
-          [10.748128, 59.911076]
-        ],
+        "coordinates": [[10.748128, 59.911076]],
         "properties": [
           {
             "id": "NSR:GroupOfStopPlaces:1",
@@ -36,9 +34,7 @@
       },
       "expected": {
         "priorityThresh": 1,
-        "coordinates": [
-          [9.664788, 59.320199]
-        ],
+        "coordinates": [[9.664788, 59.320199]],
         "properties": [
           {
             "id": "10855461",

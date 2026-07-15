@@ -62,7 +62,7 @@
       "status": "pass",
       "in": {
         "text": "os",
-        "focus.point.lat": 59.91130,
+        "focus.point.lat": 59.9113,
         "focus.point.lon": 10.74161,
         "size": 30
       },
@@ -81,6 +81,5 @@
         ]
       }
     }
-
   ]
 }

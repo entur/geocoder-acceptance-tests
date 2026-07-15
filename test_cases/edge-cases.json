@@ -32,9 +32,7 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "category": [
-              "bydel"
-            ]
+            "category": ["bydel"]
           }
         ]
       }
@@ -112,10 +110,7 @@
         "properties": [
           {
             "name": "ODEON Oslo",
-            "category": [
-              "poi",
-              "cinema"
-            ]
+            "category": ["poi", "cinema"]
           }
         ]
       }

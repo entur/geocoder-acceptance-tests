@@ -61,8 +61,17 @@
         "priorityThresh": 3,
         "properties": [
           {
-            "stopPlaceTypes": ["railStation", "onstreetBus", "busStation", "airport"],
-            "transportModes": [{"mode": "rail"}, {"mode": "bus"}, {"mode": "air"}],
+            "stopPlaceTypes": [
+              "railStation",
+              "onstreetBus",
+              "busStation",
+              "airport"
+            ],
+            "transportModes": [
+              { "mode": "rail" },
+              { "mode": "bus" },
+              { "mode": "air" }
+            ],
             "fareZones": ["RUT:FareZone:1"]
           }
         ]

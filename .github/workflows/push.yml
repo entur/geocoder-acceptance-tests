@@ -1,4 +1,4 @@
-name: Build and push
+name: CI
 on:
   push:
     branches:
@@ -7,9 +7,24 @@ on:
     branches:
       - master
 jobs:
-  docker-build:
-    if: github.repository_owner == 'entur' && github.event_name == 'push' && github.ref == 'refs/heads/master'
-    uses: entur/gha-docker/.github/workflows/build.yml@v1
-  docker-push:
-    needs: [docker-build]
-    uses: entur/gha-docker/.github/workflows/push.yml@v1
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+  acceptance-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Run v3 acceptance tests against dev
+        run: npm run v3dev

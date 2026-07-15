@@ -29,7 +29,7 @@
       "in": {
         "q": "trondheim s",
         "lat": 63.42692,
-        "lon": 10.39690
+        "lon": 10.3969
       },
       "expected": {
         "priorityThresh": 2,
@@ -49,7 +49,7 @@
       "in": {
         "q": "vardø",
         "lat": 63.42692,
-        "lon": 10.39690
+        "lon": 10.3969
       },
       "expected": {
         "priorityThresh": 2,

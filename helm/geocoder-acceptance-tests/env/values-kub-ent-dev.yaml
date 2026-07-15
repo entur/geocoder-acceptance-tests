@@ -1,8 +1,0 @@
-env: dev
-
-environment:
-  testArg: dev
-  slackUrl: ror-dev-slack-url
-  projectId: ent-kub-dev
-  pubsubTopic: projects/ent-kakka-dev/topics/ror.kakka.outbound.topic.geocoder.smoke.test
-  gcsBasePath: gs://ror-kakka-dev/es-data/
