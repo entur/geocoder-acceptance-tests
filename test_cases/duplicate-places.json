@@ -1,0 +1,98 @@
+{
+  "name": "Duplicate places",
+  "description": "A stedsnavn place is dropped when a group of stop places covers the same town",
+  "tests": [
+    {
+      "id": "sogndal-tettsted",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "sogndal",
+        "size": 30
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:53"
+          }
+        ]
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "name": "Sogndal",
+            "category": ["tettsted"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "asker-tettsted",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "asker",
+        "size": 30
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:184"
+          }
+        ]
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "name": "Asker",
+            "category": ["tettsted"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "trondheim-by",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "trondheim",
+        "size": 30
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "name": "Trondheim",
+            "category": ["by"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "harstad-bilingual-locality",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "text": "harstad",
+        "size": 30
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:32"
+          }
+        ]
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "name": "Harstad",
+            "category": ["by"]
+          }
+        ]
+      }
+    }
+  ]
+}

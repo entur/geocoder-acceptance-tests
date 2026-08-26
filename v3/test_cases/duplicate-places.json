@@ -1,0 +1,106 @@
+{
+  "name": "Duplicate places",
+  "description": "A stedsnavn place is dropped when a group of stop places covers the same town",
+  "tests": [
+    {
+      "id": "sogndal-tettsted",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "sogndal",
+        "limit": 30
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:53"
+          }
+        ]
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "layer": "place",
+            "names": {
+              "default": "Sogndal"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "asker-tettsted",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "asker",
+        "limit": 30
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:184"
+          }
+        ]
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "layer": "place",
+            "names": {
+              "default": "Asker"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "trondheim-by",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "trondheim",
+        "limit": 30
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "layer": "place",
+            "names": {
+              "default": "Trondheim"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "harstad-bilingual-locality",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "harstad",
+        "limit": 30
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:32"
+          }
+        ]
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "layer": "place",
+            "names": {
+              "default": "Harstad"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
