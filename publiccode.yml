@@ -1,0 +1,62 @@
+# publiccode.yml metadata, see https://yml.publiccode.tools/
+publiccodeYmlVersion: "0.7.0"
+
+name: geocoder-acceptance-tests
+url: https://github.com/entur/geocoder-acceptance-tests
+
+platforms:
+  - linux
+  - mac
+
+categories:
+  - test-management
+  - geographic-information-systems
+
+developmentStatus: stable
+softwareType: standalone/other
+
+organisation:
+  name: Entur AS
+  uri: https://entur.no
+
+intendedAudience:
+  scope:
+    - transportation
+  countries:
+    - NO
+
+description:
+  en:
+    localisedName: geocoder-acceptance-tests
+    shortDescription: Acceptance tests for the Entur geocoder, run as smoke
+      tests in the build pipeline.
+    longDescription: >
+      JSON test cases describing a query and the results expected in a given
+      order, run against dev, test, production or a local
+      [Entur Geocoder](https://github.com/entur/geocoder) instance by
+      pelias-fuzzy-tester. Covers both the v2 and v3 APIs.
+    features:
+      - JSON test cases with expected result order
+      - Runs against dev, test, production or a local instance
+      - Separate suites for the v2 and v3 APIs
+      - Run as smoke tests after every deploy
+
+legal:
+  license: EUPL-1.2
+  mainCopyrightOwner: Entur AS
+
+maintenance:
+  type: internal
+  contacts:
+    - name: Entur ROR (Open Data and Journey Planning)
+      email: kollektivdata@entur.org
+
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en
+
+dependsOn:
+  open:
+    - name: pelias-fuzzy-tester
+    - name: Entur Geocoder
