@@ -406,21 +406,6 @@
       }
     },
     {
-      "id": "jernbanetorget-description",
-      "endpoint": "autocomplete",
-      "status": "fail",
-      "description": "Skipped: v3 does not include description field",
-      "in": {
-        "q": "jernbanetorget",
-        "multimodal": "all",
-        "limit": 20
-      },
-      "expected": {
-        "priorityThresh": 20,
-        "properties": [{}]
-      }
-    },
-    {
       "id": "ullerud-stop-first",
       "endpoint": "autocomplete",
       "status": "pass",
