@@ -1,0 +1,187 @@
+{
+  "name": "Character folding",
+  "description": "A query typed without æøå must find the real spelling, a query typed with æøå must stay narrow, and accents outside æøå must fold away entirely",
+  "tests": [
+    {
+      "id": "aal-finds-ål",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "aal"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:118"
+          }
+        ]
+      }
+    },
+    {
+      "id": "aalesund-finds-ålesund",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "aalesund"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:28"
+          }
+        ]
+      }
+    },
+    {
+      "id": "al-finds-ål",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "The bare vowel must reach Ål too, which scandinavian_normalization alone would not do",
+      "in": {
+        "q": "al"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:118"
+          }
+        ]
+      }
+    },
+    {
+      "id": "aal-pensjonat-still-reachable",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Folding aa into å costs literal Aa- names their bare-prefix hits, but a second token must still reach them",
+      "in": {
+        "q": "aal pensjonat"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "names": {
+              "default": "Aal pensjonat B&B"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoa-returns-støa-too",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "The ASCII query is broad, so Støa is a wanted match",
+      "in": {
+        "q": "stoa",
+        "limit": 20
+      },
+      "expected": {
+        "priorityThresh": 20,
+        "properties": [
+          {
+            "names": {
+              "default": "Støa"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoa-ranks-stoa-first",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Støa ranks below every Stoa hit, asserted as absence from the first page. major-items.json owns the placement of Stoa stasjon itself.",
+      "in": {
+        "q": "stoa",
+        "limit": 10
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "names": {
+              "default": "Støa"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "støa-excludes-stoa",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "A query typed with ø must not fall back to the bare-vowel spelling",
+      "in": {
+        "q": "støa",
+        "limit": 20
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "id": "NSR:StopPlace:62352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ravdojohka-finds-rávdojohka",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Sámi names carry á š đ ŋ, which scandinavian_folding leaves alone and asciifolding removes",
+      "in": {
+        "q": "ravdojohka"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "names": {
+              "default": "Rávdojohka"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lisleby-alle-finds-allé",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "allé is a common street suffix, and two accents in one name are past what the lenient retry recovers",
+      "in": {
+        "q": "lisleby alle"
+      },
+      "expected": {
+        "priorityThresh": 5,
+        "properties": [
+          {
+            "names": {
+              "default": "Lisleby allé"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo-telemark-finds-bø",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Bare \"bo\" does not reach Bø, since QueryReranker compares character-exactly, but a second token does",
+      "in": {
+        "q": "bo telemark"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "names": {
+              "default": "Bø"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
