@@ -1,0 +1,463 @@
+{
+  "name": "Query synonyms",
+  "description": "Photon is started with -synonym-file, so a completed query token reaches its abbreviation, nynorsk form or dialect variant. Only whole tokens expand: partly typed words and compounds are untouched.",
+  "tests": [
+    {
+      "id": "gt-finds-gate",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Without the gt rule this query ranks Karl Johans-vegen first. The municipality that wins varies, so pin the street name.",
+      "in": {
+        "q": "karl johans gt"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "categories": ["street"],
+            "address": {
+              "streetName": "Karl Johans gate"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gt-with-period-finds-gate",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "gt. is its own synonym, since the trailing period survives tokenisation",
+      "in": {
+        "q": "karl johans gt."
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "categories": ["street"],
+            "address": {
+              "streetName": "Karl Johans gate"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "schweigaards-gt-finds-gate",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Returned nothing at all before the gt rule",
+      "in": {
+        "q": "schweigaards gt"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:0301-Schweigaards gate",
+            "categories": ["street"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kirke-finds-kyrkje",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "askvoll kirke"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:36458",
+            "names": {
+              "default": "Askvoll kyrkje"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "austre-finds-østre",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "The rule runs both ways: a nynorsk query must reach the bokmål name too, which previously gave Austre Moland kirke",
+      "in": {
+        "q": "austre aker kirke"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "OSM:TopographicPlace:113442993",
+            "names": {
+              "default": "Østre Aker kirke"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sykehus-finds-sjukehus",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "haukeland sykehus"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:GroupOfStopPlaces:179",
+            "names": {
+              "default": "Haukeland sjukehus"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sykehjem-finds-sjukeheim",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Previously answered with Borgen sykehjem, which matches neither token well",
+      "in": {
+        "q": "bo sykehjem"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:6034",
+            "names": {
+              "default": "Bø sjukeheim"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ost-finds-aust",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "aksland ost"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:30487",
+            "names": {
+              "default": "Aksland aust"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ostre-finds-austre",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ostre bakken"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "KVE:TopographicPlace:4034-Austre Bakken",
+            "names": {
+              "default": "Austre Bakken"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sor-finds-syd",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Previously answered with Søndre Bjerkøystrand",
+      "in": {
+        "q": "bjerke sor"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:19298",
+            "names": {
+              "default": "Bjerke syd"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "syd-finds-sør",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Previously answered with Arendal Sykehusklinikk",
+      "in": {
+        "q": "aarland syd"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:29149",
+            "names": {
+              "default": "Aarland sør"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sore-finds-søndre",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "alteidet sore"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:55181",
+            "names": {
+              "default": "Alteidet søndre"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lufthavn-finds-flyplass",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "geilo lufthavn"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59225",
+            "names": {
+              "default": "Geilo flyplass"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flyplass-finds-lufthavn",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "alta flyplass"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59291",
+            "names": {
+              "default": "Alta lufthavn"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "partly-typed-sykehjem-does-not-expand",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Autocomplete matches the last token with its own analyzer, which carries no synonyms, so Bø sjukeheim stays out of reach until sykehjem is typed out. Documented limitation, not a wanted behaviour.",
+      "in": {
+        "q": "bo sykehj",
+        "limit": 20
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "id": "NSR:StopPlace:6034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "partly-typed-ost-does-not-expand",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "Same limitation as bo sykehj: only the completed word expands",
+      "in": {
+        "q": "aksland os",
+        "limit": 20
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "id": "NSR:StopPlace:30487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "compound-does-not-expand",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "kirkevn is one token, so the kirke rule cannot reach inside it and Kyrkjevegen stays out of reach",
+      "in": {
+        "q": "kirkevn",
+        "limit": 20
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "names": {
+              "default": "Kyrkjevegen"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "compound-gt-unaffected",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "storgt is one token too, so the gt rule leaves the ranking as it was",
+      "in": {
+        "q": "storgt"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58195",
+            "names": {
+              "default": "Storo"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bare-gt-does-not-flood-streets",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "A one-token gt query must not push every street named \"... gate\" onto the first page, which the Photon fork used to do",
+      "in": {
+        "q": "gt",
+        "limit": 10
+      },
+      "unexpected": {
+        "properties": [
+          {
+            "categories": ["street"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "prinsens-gate-unaffected",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "prinsens gate"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:41613",
+            "names": {
+              "default": "Prinsens gate"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "oslo-s-unaffected",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "oslo s"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59872",
+            "names": {
+              "default": "Oslo S"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bergen-stasjon-unaffected",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "bergen stasjon"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59983",
+            "names": {
+              "default": "Bergen stasjon"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "alta-lufthavn-unaffected",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "description": "The literal spelling must still win now that flyplass expands to it",
+      "in": {
+        "q": "alta lufthavn"
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:59291",
+            "names": {
+              "default": "Alta lufthavn"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "askim-videregaende-skole-unaffected",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "askim videregaende skole"
+      },
+      "expected": {
+        "priorityThresh": 3,
+        "properties": [
+          {
+            "id": "OSM:TopographicPlace:281914057",
+            "names": {
+              "default": "Askim videregående skole"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
