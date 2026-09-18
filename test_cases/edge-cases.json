@@ -601,7 +601,7 @@
         "text": "stavanger"
       },
       "expected": {
-        "priorityThresh": 2,
+        "priorityThresh": 3,
         "properties": [
           {
             "id": "NSR:StopPlace:61291",
