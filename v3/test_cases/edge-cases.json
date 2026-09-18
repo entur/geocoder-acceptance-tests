@@ -695,6 +695,60 @@
         "size": "<= 5",
         "properties": []
       }
+    },
+    {
+      "id": "bussterminal-not-flooded-by-groups",
+      "description": "a word many member stops share must return the stops, not the groups that inherit their names",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "bussterminal",
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [{ "layer": "stopPlace" }]
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [{ "layer": "groupOfStopPlaces" }]
+      }
+    },
+    {
+      "id": "stasjon-not-flooded-by-groups",
+      "description": "a word many member stops share must return the stops, not the groups that inherit their names",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "stasjon",
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [{ "layer": "stopPlace" }]
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [{ "layer": "groupOfStopPlaces" }]
+      }
+    },
+    {
+      "id": "ferjekai-not-flooded-by-groups",
+      "description": "a word many member stops share must return the stops, not the groups that inherit their names",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "ferjekai",
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 1,
+        "properties": [{ "layer": "stopPlace" }]
+      },
+      "unexpected": {
+        "priorityThresh": 10,
+        "properties": [{ "layer": "groupOfStopPlaces" }]
+      }
     }
   ]
 }

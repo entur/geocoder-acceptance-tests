@@ -77,6 +77,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "bussterminal-nearest-first",
+      "description": "bias is flat inside the focus radius, so a too-wide radius let Lillestrøm (17 km) outrank Sandvika (12.8 km)",
+      "endpoint": "autocomplete",
+      "status": "pass",
+      "in": {
+        "q": "bussterminal",
+        "lat": 59.9114,
+        "lon": 10.75105,
+        "limit": 10
+      },
+      "expected": {
+        "priorityThresh": 2,
+        "properties": [
+          {
+            "id": "NSR:StopPlace:58293"
+          },
+          {
+            "id": "NSR:StopPlace:4030"
+          }
+        ]
+      }
     }
   ]
 }
