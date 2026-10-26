@@ -15,7 +15,7 @@
     "v3prd": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3prd -m 10 v3/test_cases/*.json"
   },
   "dependencies": {
-    "pelias-fuzzy-tester": "^3.2.0"
+    "pelias-fuzzy-tester": "^4.2.1"
   },
   "devDependencies": {
     "prettier": "^3.9.10"
