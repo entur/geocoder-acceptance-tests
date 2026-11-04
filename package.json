@@ -12,7 +12,8 @@
     "v3local": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3local -m 10 v3/test_cases/*.json",
     "v3dev": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3dev -m 10 v3/test_cases/*.json",
     "v3tst": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3tst -m 10 v3/test_cases/*.json",
-    "v3prd": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3prd -m 10 v3/test_cases/*.json"
+    "v3prd": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3prd -m 10 v3/test_cases/*.json",
+    "v3nordic": "PELIAS_CONFIG=./pelias.json fuzzy-tester -e v3nordic -m 10 v3/test_cases/*.json"
   },
   "dependencies": {
     "pelias-fuzzy-tester": "^4.2.1"
