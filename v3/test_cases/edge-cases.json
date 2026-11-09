@@ -427,7 +427,7 @@
       "endpoint": "autocomplete",
       "status": "pass",
       "in": {
-        "q": "oslo",
+        "q": "oslov",
         "countries": "se"
       },
       "expected": {
