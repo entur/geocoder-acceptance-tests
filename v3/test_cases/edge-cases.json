@@ -633,7 +633,7 @@
         "q": "utfarten"
       },
       "expected": {
-        "priorityThresh": 1,
+        "priorityThresh": 3,
         "properties": [
           {
             "id": "NSR:StopPlace:10680",
