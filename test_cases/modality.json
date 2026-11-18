@@ -63,11 +63,7 @@
           {
             "category": ["railStation", "onstreetBus", "busStation", "airport"],
             "mode": [{ "rail": null }, { "bus": null }, { "air": null }],
-            "tariff_zones": [
-              "INN:TariffZone:421",
-              "RUT:TariffZone:4N",
-              "RUT:FareZone:1"
-            ]
+            "tariff_zones": ["RUT:FareZone:1"]
           }
         ]
       }
