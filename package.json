@@ -19,6 +19,6 @@
     "pelias-fuzzy-tester": "^4.2.1"
   },
   "devDependencies": {
-    "prettier": "^3.10.0"
+    "prettier": "^3.10.1"
   }
 }
